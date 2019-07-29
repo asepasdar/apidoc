@@ -1,5 +1,7 @@
 ## Introduction API (Application Programming Interface)
 ### General Overview
+Connectivity is an amazing thing, by now we're all used the instant connectivity that puts the world at our fingertips from desktop or devices. We can purchase, post, pin, and pick anything, anywhere, **_but how does it happen? how does data get from here to there? how do different devices and applications connect with each other?_** The unsung hero of our connected world is Application Programming Interface
+
 In basic terms, **APIs just allow applications to communicate with one another**. When people speak of **“an API”**, they sometimes generalize and actually mean “a publicly available web-based API that returns data, likely in JSON or XML”.  The API is not the database or even the server, it is the code that governs the **_access point(s)_** for the server.
 
 ![How API works](Assets/HowAPIWorks.png)
