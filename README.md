@@ -22,6 +22,7 @@ Now what we get might appear to be gibberish to the human eye but it's actually 
 
 >Green pen : Response from **_API_**
 
+### What is JSON and why do we use it in API?
 Let's talk about **_JSON_**, as we mentioned before **it's structured data organized according to key value pairs**, let's have a look at this simple **_JSON_**
 ```
 "restaurant": {
@@ -45,4 +46,4 @@ For example you make an **_API Request_** to get data from restaurant "Puri Purr
 	"email": "contact@puripurr.com"
 }
 ``` 
-As you can see the key stays the same for each restaurant, but the value would be different. The question is **_why JSON?_** It’s readable, it’s lightweight, but the most important, **it's comparatively easy** to get applications written in **other _programming_ languages** to read it and generate it as well.
+As you can see the key stays the same for each restaurant, but the value would be different. The question is **_why JSON?_** It’s readable, it’s lightweight, but the most important, **it's comparatively easy** to get applications written in **other programming languages** to read it and generate it as well. This means that an API that returns JSON can be accessed by an application written in programming languages C#, Java, Ruby, Python, JS, PHP and many more, this makes an API scalable and platform independent.
