@@ -22,7 +22,7 @@ Now what we get might appear to be gibberish to the human eye but it's actually 
 
 >Green pen : Response from **_API_**
 
-### What is JSON and why do we use it in API?
+### API - What is JSON and why do we use it in API?
 Let's talk about **_JSON_**, as we mentioned before **it's structured data organized according to key value pairs**, let's have a look at this simple **_JSON_**
 ```
 "restaurant": {
@@ -48,15 +48,15 @@ For example you make an **_API Request_** to get data from restaurant "Puri Purr
 ``` 
 As you can see the key stays the same for each restaurant, but the value would be different. Each **_API_** must define its own format for the data that it serves, **developers** typically read documentation provided by the **_API_ “maintainer”** (Reddit in this case) in order to learn the data format and use it properly. The question is **_why JSON?_** because it’s readable, it’s lightweight, but the most important, **it's comparatively easy** to get applications written in **other programming languages** to read it and generate it as well. This means that an **_API_** that returns **_JSON_** can be accessed by an application written in programming languages C#, Java, Ruby, Python, JS, PHP and many more, this makes an API scalable and platform independent.
 
-### HTTP Method
+### API - HTTP Method
 Until now we've only been consuming data from **_API_**, but you can also write/send data to **_API_**, for example you can send **customer information, file upload, etc**, but before we go down that road we need to talk a little bit about the concept of **_HTTP request method_**. There are several **_HTTP method_** but the big two that you really need to know are **_GET_** and **_POST_**. A **_GET request_** is what you used to consumed data, that's what we've done so far by passing **_URL_** in order to get data from the **_API_**. But a **_POST Request_** a little bit different, this method requests that a web server accepts the data enclosed in the body of the request message, most likely for storing it. It is usually used when you need to send file or data/information.
 >**Note**: We'll talk about **_body request_** later
 
 Normal web browser doesn't allow you to put data in the body of a request, but you can make a **_POST Request_** with **Postman** [[Download]](https://www.getpostman.com/downloads/), the nice thing about working with **Postman** is you can make more complex **_API Request_**, for example you can choose any one of the available **_HTTP Methods_** on the list, second you can put data in the body of a request, and the last one you can add headers to your **_API Request_**.
 >**Note**: We'll talk about **_request and response headers_** later
 
-### Request and Response Headers
+### API -Request and Response Headers
 >[TODO] Request and Response Headers
 
-### Request and Response Body
+### API - Request and Response Body
 >[TODO] Request and Response Body
