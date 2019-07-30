@@ -12,5 +12,6 @@ Imagine the following scenario: You wants to access another **app’s data** or 
 
 Reddit has **_Public API (meaning one that does not require authentication/login)_** directly in your browser, lets have a look this **_[API REDDIT POSTS](https://www.reddit.com/r/all/.json)_** , and what we get is a **response** to our **_API request_**. Basically we've made an **_API request_** in our browser to **_Reddit's Public API_**.
 >These data are raw version of the information that you can see at ~~JSON~~ [REDDIT POSTS](https://www.reddit.com/r/all/).
+
 ![How API works](Assets/JSON.PNG)
 Now what we get back might appear to be gibberish to the human eye but it's actually **_JSON (Javascript Object Notation)_ formatted data**, it's structured data organized according to key value pairs. You can copy all of these data and paste to this link [[JSON FORMATTER]](https://jsonformatter.curiousconcept.com/) to get more "easy to read" result.
