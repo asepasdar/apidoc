@@ -12,4 +12,4 @@ Imagine the following scenario: You wants to access another **app’s data** or 
 
 Reddit has public **_API (meaning one that does not require authentication/login)_** directly in your browser, lets have a look this **_Public API_** [API REDDIT POSTS](https://www.reddit.com/r/all/.json), and what we get back is a reponse to our API request. Basically we've made an API request in our browser to **_Reddit's Public API_**. 
 ![How API works](Assets/HowAPIWorks.png)
-Now what we get back might appear to be gibberish to the human eye but it's actually **_JSON (Javascript Object Notation)_ formatted data**, it's structured data organized according to key value pairs. These data are raw version of the information that you can see at ~~i hate JSON~~ [REDDIT POSTS](https://www.reddit.com/r/all/.json)
+Now what we get back might appear to be gibberish to the human eye but it's actually **_JSON (Javascript Object Notation)_ formatted data**, it's structured data organized according to key value pairs. These data are raw version of the information that you can see at **~~(JSON)~~** [REDDIT POSTS](https://www.reddit.com/r/all/.json)
