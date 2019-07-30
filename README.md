@@ -45,4 +45,4 @@ For example you make an **_API Request_** to get data from restaurant "Puri Purr
 	"email": "contact@puripurr.com"
 }
 ``` 
-As you can see the key stays the same for each restaurant, but the value would be different. The question is **_why JSON?_** It’s readable, it’s lightweight, but the most important, **_it's comparatively easy_** to get applications written in **other _programming_ languages** to read it and generate it as well.
+As you can see the key stays the same for each restaurant, but the value would be different. The question is **_why JSON?_** It’s readable, it’s lightweight, but the most important, **it's comparatively easy** to get applications written in **other _programming_ languages** to read it and generate it as well.
