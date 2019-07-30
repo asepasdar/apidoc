@@ -34,7 +34,6 @@ Let's talk about **_JSON_**, as we mentioned before **it's structured data organ
 }
 ```
 Neat. This is fairly easy to read — our data is stored as key/value pairs. This means that we can see the key on the left, in this case **_name, address, zipcode, website, email_**, and the value on the right, in this case **value of "name" is _Fish Witch_** and so on. A different Restaurant would have a different value, but its key would be the same — it would always have a name, address, zip, phone and email.
-
 For example you make an **_API Request_** to get data from restaurant "Puri Purr", **_API Response_** would be like this:
 ```
 "restaurant": {
@@ -46,3 +45,4 @@ For example you make an **_API Request_** to get data from restaurant "Puri Purr
 	"email": "contact@puripurr.com"
 }
 ``` 
+As you can see the key stays the same for each restaurant, but the value would be different. The question is **_why JSON?_** It’s readable, it’s lightweight, but the most important, it's comparatively easy to get applications written in other programming languages to read it and generate it as well.
