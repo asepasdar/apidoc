@@ -53,3 +53,5 @@ Until now we've only been consuming data from **_API_**, but you can also write/
 >**Note**: We'll talk about **_body request_** later
 
 Now normal web browser doesn't allow you to put data in the body of a request, but you can make a **_POST Request_** with **Postman** [[Download]](https://www.getpostman.com/downloads/), the nice thing about working with **Postman** is you can make more complex **_API Request_**, for example you can choose any one of the available **_HTTP Methods_** on the list, second you can put data in the body of a request, and finally you can add headers to your **_API Request_**.
+>**Note**: We'll talk about **_headers request_** later
+
