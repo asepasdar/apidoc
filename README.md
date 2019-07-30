@@ -23,11 +23,13 @@ Now what we get might appear to be gibberish to the human eye but it's actually 
 >Green pen : Response from **_API_**
 
 Let's talk about **_JSON_**, as we mentioned before **it's structured data organized according to key value pairs**, let's look at this simple JSON
->"restaurant": {
->	"name": "Fish Witch",
->	"address": "214 NE Broadway",
->	"zipcode": "97232",
->	"phone": "503–000–0000",
->	"website": "http://fishwitch.com",
->	"email": "hellofishy@fishwitch.com"
->}
+```
+"restaurant": {
+	"name": "Fish Witch",
+	"address": "214 NE Broadway",
+	"zipcode": "97232",
+	"phone": "503–000–0000",
+	"website": "http://fishwitch.com",
+	"email": "hellofishy@fishwitch.com"
+}
+```
