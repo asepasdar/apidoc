@@ -26,10 +26,11 @@ Let's talk about **_JSON_**, as we mentioned before **it's structured data organ
 ```
 "restaurant": {
 	"name": "Fish Witch",
-	"address": "214 NE Broadway",
-	"zipcode": "97232",
-	"phone": "503–000–0000",
-	"website": "http://fishwitch.com",
-	"email": "hellofishy@fishwitch.com"
+	"address": "Antapani",
+	"zipcode": "40291",
+	"phone": "08xx-xxxx-xxxx",
+	"website": "http://example.com",
+	"email": "info@example.com"
 }
 ```
+Neat. This is fairly easy to read — our data is stored as key/value pairs. This means that we can see the key on the left, in this case **_name, address, zipcode, website, email_**, and the value on the right, in this case **value of "name" is _antapani_** and so on. 
