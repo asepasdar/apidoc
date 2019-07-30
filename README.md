@@ -14,5 +14,8 @@ Reddit has **_Public API (meaning one that does not require authentication/login
 >These data are raw version of the information that you can see at ~~API~~ [REDDIT POSTS](https://www.reddit.com/r/all/).
 
 ![Response](Assets/JSON.PNG)
-Now what we get might appear to be gibberish to the human eye but it's actually **_JSON (Javascript Object Notation)_ formatted data**, it's structured data organized according to key value pairs. You can copy all of these data and paste to this link [[JSON FORMATTER]](https://jsonformatter.curiousconcept.com/) to get more **"easy to read"** result.
+Now what we get might appear to be gibberish to the human eye but it's actually **_JSON (Javascript Object Notation)_ formatted data**, it's structured data organized according to key value pairs. You can make an **_API Request_** with **Postman** [[Download]](https://www.getpostman.com/downloads/) to get more **"easy to read"** result, if already have it you can make an **_API Request_** like this image below
 ![JSON Formatter](Assets/JSONFormatter.PNG)
+>Blue pen  : **_HTTP_** method set to **_GET_** (we'll talk about HTTP method later)
+>Red pen   : **_API_** Link
+>Green pen : Response from **_API_**
