@@ -56,5 +56,7 @@ Normal web browser doesn't allow you to put data in the body of a request, but y
 >**Note**: We'll talk about **_request and response headers_** later
 
 ### Request and Response Headers
+>[TODO] Request and Response Headers
 
-### Body Request
+### Request and Response Body
+>[TODO] Request and Response Body
