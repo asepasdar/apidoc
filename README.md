@@ -102,3 +102,7 @@ There are several **Status Code**, but these are list of Status Code that you re
 |----------------|-------------------------------------------------------------|
 |200             |OK : the request was successful.                             |
 |400             |Bad Request: the request was not properly formed and therefore was not successful. |
+|404             |Not Found: the URL/URI path is incorrect, or communication with the server was unsuccessful. |
+|405             |Method Not Allowed: the syntax of the request does not match the request type. The Allow header provides more information about the supported types. |
+|406             |Not Acceptable: the Accept header response type is not supported. |
+|500             |Internal Server Error: this status indicates that an error occurred on the server and it was unable to respond. |
