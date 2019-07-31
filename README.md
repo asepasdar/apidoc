@@ -119,6 +119,14 @@ This is most important, before users can make requests with your **_API_**, they
 
 ![Status Code](Assets/auth.png)
 
+An API might authenticate you but not authorize you to make a certain request. **Why do APIs even need authentication?** For read-only **_APIs_**, sometimes users don’t need keys. But most commercial APIs do require authorization in the form of **_API_** keys or other methods. If you didn’t have any **security** with your **_API_**, users could make unlimited amounts of **_API_** calls without any kind of registration. Allowing unrestricted requests would make a revenue model for your **_API_** difficult. 
+
+Additionally, without authentication, there wouldn’t be an easy way to associate requests with specific user data. And there wouldn’t be a way to protect against requests from malicious users that might delete another user’s data (such as by making DELETE requests on another’s account).
+
+There are several methods for authorization, but most often used are **_API keys_**, and **_OAuth or OAuth2_**.
+API Keys require you to sign up for an API key in order to use when you send **_Request to API_**. The API key mainly functions as a way to identify the person making the API call (authenticating you to use the API).
+![Status Code](Assets/ApiKeys.png)
+
 ##### Keep it simple
 We need to make sure that the URL of the API is simple. For example, if we want to design APIs for return data users, it should be designed like this:
 ```
