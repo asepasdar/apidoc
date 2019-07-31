@@ -97,7 +97,7 @@ There are so many informations, but take a look at **status: 200** in **_Respons
 There are several **Status Code**, but here's list of Status Code that you really need to know
 
 
-|                |ASCII                          |HTML                         |
+|Code            |Description                                                  |
 |----------------|-------------------------------|-----------------------------|
 
 ### API - Request and Response Body
