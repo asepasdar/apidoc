@@ -1,9 +1,9 @@
 # Introduction API (Application Programming Interface)
 ## Table of Content
-1. What is API?
+1. **What is API?**
 	- [General Overview](#general-overview)
 	- [Why would we need an API?](#why-would-we-need-an-api)
-2. A Deeper Dive into API
+2. **A Deeper Dive into API**
 	- [API - What is JSON and why do we use it in API?](#api-what-is-json-and-why-do-we-use-it-in-api)
 
 ## General Overview
