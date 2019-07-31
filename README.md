@@ -63,8 +63,21 @@ Headers in a Request API usually contains some kind of information to the format
 
 Maybe it's a little bit confusing, what is it looks like? Lets open **Postman** [[Download]](https://www.getpostman.com/downloads/), and choose **Postman Console** on the bottom of the application **(Ctrl + Alt + C)**.
 ![Postman Console](Assets/PostmanConsole.PNG)
-After that, let's fill the input field with **https://www.reddit.com/r/all/.json** and then click **Send**. Wait for a couple seconds, and let's take a look on **Postman Console**. Some kind of information would appear in your Postman Console, just like image below.
+After that, let's fill the input field with **https://www.reddit.com/r/all/.json** and then click **Send**. Wait for a couple seconds, and let's take a look on **Postman Console**. Some kind of information would appear in your **Postman Console**, just like image below.
 ![Postman Console](Assets/PostmanRequest.PNG)
+Let's take a look on **Request Headers:**, as you can see there are some kind of information
+```
+Request Headers:
+	User-Agent:"PostmanRuntime/7.15.2"
+	Accept:"*/*"
+	Cache-Control:"no-cache"
+	Postman-Token:"cec80382-8cd9-4747-ace2-da42fe79db3a"
+	Host:"www.reddit.com"
+	Cookie:"loid=000000000049bvibpr.2.1564396818366.Z0FBQUFBQmRQczBTQ2VJVlhXU0dYaFBMd3ZwUlFLd2lMaTUxSlNEekJk
+		dGp4MGlSejk1ZkJsUWN2ZVZKRE9tbDVhMDFZX2F4dDFHTXZ5cTdGV1VMVzNZeUtMVjM2WFYtVE9vODE1U1I0bVZtNjR6UENKckZjZGVSMDRMR0hNOXRDR1MxV1VGRzZvRm4; edgebucket=GqcSo8cyBMd8dM847X; rseor3=true; rabt=; session_tracker=jcQ7jfC1E76WG5gXP9.0.1564546143430.Z0FBQUFBQmRRUlJmNEZrcXU4Z3c0UU9iSXlWNkc0QkV5QjMxQlRETjJmYUZDME5LSW9xREN3NEdVVzBGTUdwMzY5LV9ham4yOWFDQkRITUE1NnJxUFRYZE8zVVdDMTNQRVhnaS1SWEttM0pvU0N4NFlYZnJoZE1DbXFDdFNlT0pFbEVGREVDczc5ZXo"
+	Accept-Encoding:"gzip, deflate"
+	Connection:"keep-alive"
+```
 
 ### API - Request and Response Body
 >[TODO] Request and Response Body
