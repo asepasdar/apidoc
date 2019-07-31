@@ -99,6 +99,8 @@ There are several **Status Code**, but here's list of Status Code that you reall
 
 |Code            |Description                                                  |
 |----------------|-------------------------------------------------------------|
+|200             |OK : the request was successful.                             |
+|400             |Bad Request: the request was not properly formed and therefore was not successful. |
 
 ### API - Request and Response Body
 >[TODO] Request and Response Body
