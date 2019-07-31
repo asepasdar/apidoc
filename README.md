@@ -170,3 +170,7 @@ Use of **pagination** is a must when you expose an API which might return huge d
 
 #### Supported formats
 It is also important to choose how your API responds. Most of the modern day applications should return JSON responses, unless your app still needs to get an XML response.
+
+
+#### Standard API Template in Agate
+[[Game Backend Netcore Template]](http://gate.git/code-bank/game-backend-netcore-template)
