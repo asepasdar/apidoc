@@ -82,6 +82,16 @@ Request Headers:
 	Accept-Encoding:"gzip, deflate"
 	Connection:"keep-alive"
 ```
+```
+Response Headers:
+	status: 200
+	Content-Type:"application/json; charset=UTF-8"
+	x-ua-compatible:"IE=edge"
+	x-frame-options:"SAMEORIGIN"
+	x-content-type-options:"nosniff"
+	x-xss-protection:"1; mode=block"
+	........
+```
 
 ### API - Request and Response Body
 >[TODO] Request and Response Body
