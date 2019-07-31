@@ -55,7 +55,7 @@ Until now we've only been consuming data from **_API_**, but you can also write/
 Normal web browser doesn't allow you to put data in the body of a request, but you can make a **_POST Request_** with **Postman** [[Download]](https://www.getpostman.com/downloads/), the nice thing about working with **Postman** is you can make more complex **_API Request_**, for example you can choose any one of the available **_HTTP Methods_** on the list, second you can put data in the body of a request, and the last one you can add headers to your **_API Request_**.
 >**Note**: We'll talk about **_request and response headers_** later.
 
-### API - Request and Response Headers
+### API - Request/Response Headers and Body
 What is **Headers** in **_API_**? To say briefly headers are some kind of information about your **_Request_** and **_Response API_**. They define the operating parameters of an **_HTTP transaction_**. For security reasons, some **_Headers_** can only be controlled by the user agent **(We won't talk about this)**. 
 
 Headers in a Request API usually contains some kind of information to the format of the request and allowed format of the response **_(XML, JSON, etc)_**, or to give some kind of **_Authentication_**. A little bit different, **_Response Headers_** provide information about the status of the request and format of the response.
@@ -95,12 +95,9 @@ Response Headers:
 There are so many informations, but take a look at **status: 200** in **_Response Headers_**, what is that mean? That is **Response Status Code**. **Status code** indicates whether the request was successful, and if not, the type of error that occurred.
 ![Postman Console](Assets/StatusCode.png)
 
-There are several **Status Code**, but here's list of Status Code that you really need to know
+There are several **Status Code**, but these are list of Status Code that you really need to know
 
 |Code            |Description                                                  |
 |----------------|-------------------------------------------------------------|
 |200             |OK : the request was successful.                             |
 |400             |Bad Request: the request was not properly formed and therefore was not successful. |
-
-### API - Request and Response Body
->[TODO] Request and Response Body
