@@ -112,7 +112,7 @@ There are several **Status Code**, but these are list of Status Code that you re
 
 ### Principles of Designing APIs
 Now let's understand the principles we should follow while designing the **_RESTful APIs_**.
-##### Authorization
+##### **_Authorization_**
 This is most important, before users can make requests with your **_API_**, they’ll usually need to register for an **_API_** key or learn other ways to authenticate the requests. **_APIs_** vary in the way they authenticate users. Some APIs require you to include an API key in the request header, while other APIs require elaborate security due to the need to protect sensitive data, prove identity, and ensure the requests aren’t tampered with.
 - **Authentication:** Refers to proving correct identity
 - **Authorization:** Refers to allowing a certain action
@@ -127,7 +127,7 @@ There are several methods for authorization, but most often used are **_API keys
 API Keys require you to sign up for an API key in order to use when you send **_Request to API_**. The API key mainly functions as a way to identify the person making the API call (authenticating you to use the API).
 ![Status Code](Assets/ApiKeys.png)
 
-##### Keep it simple
+##### **Keep it simple**
 We need to make sure that the URL of the API is simple. For example, if we want to design APIs for return data users, it should be designed like this:
 ```
 /users
