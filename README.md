@@ -116,6 +116,7 @@ Now let's understand the principles we should follow while designing the **_REST
 This is most important, before users can make requests with your **_API_**, they’ll usually need to register for an **_API_** key or learn other ways to authenticate the requests. **_APIs_** vary in the way they authenticate users. Some APIs require you to include an API key in the request header, while other APIs require elaborate security due to the need to protect sensitive data, prove identity, and ensure the requests aren’t tampered with.
 - **Authentication:** Refers to proving correct identity
 - **Authorization:** Refers to allowing a certain action
+
 ![Status Code](Assets/auth.png)
 
 ##### Keep it simple
