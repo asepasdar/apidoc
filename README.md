@@ -126,10 +126,9 @@ This is most important, before users can make requests with your **_API_**, they
 
 An API might authenticate you but not authorize you to make a certain request. **Why do APIs even need authentication?** For read-only **_APIs_**, sometimes users don’t need keys. But most commercial APIs do require authorization in the form of **_API_** keys or other methods. If you didn’t have any **security** with your **_API_**, users could make unlimited amounts of **_API_** calls without any kind of registration. Allowing unrestricted requests would make a revenue model for your **_API_** difficult. 
 
-Additionally, without authentication, there wouldn’t be an easy way to associate requests with specific user data. And there wouldn’t be a way to protect against requests from malicious users that might delete another user’s data (such as by making DELETE requests on another’s account).
+Additionally, without authentication, there wouldn’t be an easy way to associate requests with specific user data. And there wouldn’t be a way to protect against requests from malicious users that might delete another user’s data (such as by making DELETE requests on another’s account). There are several methods for authorization, but most often used are **_API keys_**, and **_OAuth or OAuth2_** (We won't talk about this).
 
-There are several methods for authorization, but most often used are **_API keys_**, and **_OAuth or OAuth2_**.
-API Keys require you to sign up for an API key in order to use when you send **_Request to API_**. The API key mainly functions as a way to identify the person making the API call (authenticating you to use the API).
+**_API Keys_** require you to sign up for an API key in order to use when you send **_Request to API_**. The API key mainly functions as a way to identify the person making the API call (authenticating you to use the API). The API key might also be associated with a specific app that you register.
 ![Status Code](Assets/ApiKeys.png)
 
 #### **Keep it simple**
@@ -140,4 +139,15 @@ We need to make sure that the URL of the API is simple. For example, if we want 
 ```
 This first one is to get all users data and the second one is to get specific user.
 
-#### Use nouns and not the verbs
+#### Use of the right HTTP methods
+APIs have various methods to indicate the type of operation we are going to perform with this API. We need to make sure we use the right HTTP method for a given operation.
+- GET — To get a data or list of data.
+- POST — To create a data or list of data (in some cases to get a data or list of data).
+- PUT/PATCH — To update the existing data or list of data.
+- DELETE - To delete the existing data or the list of data.
+
+#### Use pagination (limit)
+Use of **pagination** is a must when you expose an API which might return huge data, and if proper load balancing is not done, **the consumer might end up bringing down the service**. We always need to keep in mind that the API design should be full proof and foolproof. Use of **limit** and **offset** is recommended here. For example, /users?limit=25&offset=50. It is also advised to keep a default limit and default offset.
+
+#### Supported formats
+It is also important to choose how your API responds. Most of the modern day applications should return JSON responses, unless your app still needs to get an XML response.
