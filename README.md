@@ -63,6 +63,8 @@ Headers in a Request API usually contains some kind of information to the format
 
 Maybe it's a little bit confusing, what is it looks like? Lets open **Postman** [[Download]](https://www.getpostman.com/downloads/), and choose **Postman Console** on the bottom of the application **(Ctrl + Alt + C)**.
 ![Postman Console](Assets/PostmanConsole.PNG)
+After that, let's fill the input field with **https://www.reddit.com/r/all/.json** and then click **Send**. Wait for a couple seconds, and let's take a look on **Postman Console**. Some kind of information would appear in your Postman Console, just like image below.
+![Postman Console](Assets/PostmanRequest.PNG)
 
 ### API - Request and Response Body
 >[TODO] Request and Response Body
