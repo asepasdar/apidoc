@@ -10,7 +10,7 @@ Think of an **API** like a menu in a restaurant. The menu provides a list of dis
 ### Why would we need an API?
 Imagine the following scenario: You wants to access another **app’s data** or **functionality**. For example, perhaps you want to access all posts on reddit. You could email Reddit and ask for a spreadsheet file of all posts. But then you’d have to find a way to import that spreadsheet into your application, even if you stored them in a **_database_**, the data would become **outdated very quickly**. It would be impossible to keep it up to date. It would be better and simpler for Reddit to provide you a way to query their application to get that data, so that you can view or use it in your own application. It would stay up to date automatically that way. 
 
-Reddit has **_Public API (meaning one that does not require authentication/login)_** directly in your browser, lets have a look this **_[API REDDIT POSTS](https://www.reddit.com/r/all/.json)_** , and what we get is a **response** to our **_API request_**. Basically we've made an **_API request_** in our browser to **_Reddit's Public API_**.
+Reddit has **_Public API (meaning one that does not require authentication/login)_** directly in your browser, lets take a look this **_[API REDDIT POSTS](https://www.reddit.com/r/all/.json)_** , and what we get is a **response** to our **_API request_**. Basically we've made an **_API request_** in our browser to **_Reddit's Public API_**.
 >These data below are raw version of the information that you can see at **_~~API~~ [REDDIT POSTS](https://www.reddit.com/r/all/)_**.
 
 ![Response](Assets/JSON.PNG)
@@ -23,7 +23,7 @@ Now what we get might appear to be gibberish to the human eye but it's actually 
 >Green pen : Response from **_API_**
 
 ### API - What is JSON and why do we use it in API?
-Let's talk about **_JSON_**, as we mentioned before **it's structured data organized according to key value pairs**, let's have a look at this simple **_JSON_**
+Let's talk about **_JSON_**, as we mentioned before **it's structured data organized according to key value pairs**, let's take a look at this simple **_JSON_**
 ```
 "restaurant": {
 	"name": "Fish Witch",
@@ -50,17 +50,19 @@ As you can see the key stays the same for each restaurant, but the value would b
 
 ### API - HTTP Method
 Until now we've only been consuming data from **_API_**, but you can also write/send data to **_API_**, for example you can send **customer information, file upload, etc**, but before we go down that road we need to talk a little bit about the concept of **_HTTP request method_**. There are several **_HTTP method_** but the big two that you really need to know are **_GET_** and **_POST_**. A **_GET request_** is what you used to consumed data, that's what we've done so far by passing **_URL_** in order to get data from the **_API_**. But a **_POST Request_** a little bit different, this method requests that a web server accepts the data enclosed in the body of the request message, most likely for storing it. It is usually used when you need to send file or data/information.
->**Note**: We'll talk about **_body request_** later
+>**Note**: We'll talk about **_body request_** later.
 
 Normal web browser doesn't allow you to put data in the body of a request, but you can make a **_POST Request_** with **Postman** [[Download]](https://www.getpostman.com/downloads/), the nice thing about working with **Postman** is you can make more complex **_API Request_**, for example you can choose any one of the available **_HTTP Methods_** on the list, second you can put data in the body of a request, and the last one you can add headers to your **_API Request_**.
->**Note**: We'll talk about **_request and response headers_** later
+>**Note**: We'll talk about **_request and response headers_** later.
 
 ### API - Request and Response Headers
-What is **Headers** in **_API_**? To say briefly headers is some kind of information about your **_Request_** and **_Response API_**. They define the operating parameters of an **_HTTP transaction_**. For security reasons, some **_Headers_** can only be controlled by the user agent. 
+What is **Headers** in **_API_**? To say briefly headers is some kind of information about your **_Request_** and **_Response API_**. They define the operating parameters of an **_HTTP transaction_**. For security reasons, some **_Headers_** can only be controlled by the user agent **(We won't talk about this)**. 
 
 Headers in a Request API usually contains some kind of information to the format of the request and allowed format of the response **_(XML, JSON, etc)_**, or to give some kind of **_Authentication_**. A little bit different, Response headers provide information about the status of the request and format of the response.
->**Note**: We'll talk about **_Authentication_** later
-I
+>**Note**: We'll talk about **_Authentication_** later.
+
+Maybe it's a little bit confusing, what is it looks like? Lets open **Postman** [[Download]](https://www.getpostman.com/downloads/), and choose **Postman Console** on the bottom of the application **(Ctrl + Alt + C)**.
+![Postman Console](Assets/PostmanConsole.PNG)
 
 ### API - Request and Response Body
 >[TODO] Request and Response Body
