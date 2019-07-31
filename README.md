@@ -56,7 +56,7 @@ Normal web browser doesn't allow you to put data in the body of a request, but y
 >**Note**: We'll talk about **_request and response headers_** later.
 
 ### API - Request/Response Headers and Body
-##### **Request/Response Headers**
+##### **What is Request/Response Headers?**
 What is **Headers** in **_API_**? To say briefly headers are some kind of information about your **_Request_** and **_Response API_**. They define the operating parameters of an **_HTTP transaction_**. For security reasons, some **_Headers_** can only be controlled by the user agent **(We won't talk about this)**. 
 
 Headers in a Request API usually contains some kind of information to the format of the request and allowed format of the response **_(XML, JSON, etc)_**, or to give some kind of **_Authentication_**. A little bit different, **_Response Headers_** provide information about the status of the request and format of the response.
@@ -106,3 +106,5 @@ There are several **Status Code**, but these are list of Status Code that you re
 |405             |Method Not Allowed: the syntax of the request does not match the request type. The Allow header provides more information about the supported types. |
 |406             |Not Acceptable: the Accept header response type is not supported. |
 |500             |Internal Server Error: this status indicates that an error occurred on the server and it was unable to respond. |
+
+##### **What is Request/Response Body?**
