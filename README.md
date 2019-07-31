@@ -42,7 +42,7 @@ Now what we get might appear to be gibberish to the human eye but it's actually 
 
 
 ## API - What is JSON and why do we use it in API?
->**Note**: **A Deeper Dive into API**, it's a little bit "Technical". But this is really **~~josss~~** good if you want to know what's happen when we **Request to API** and get **Response back from API**.
+>**Note**: **A Deeper Dive into API**, it's a little bit "Technical". But this is really ~~josss~~ good if you want to know what's happen when we **Request to API** and get **Response back from API**.
 
 Let's talk about **_JSON_**, as we mentioned before **it's structured data organized according to key value pairs**, let's take a look at this simple **_JSON_**
 ```
