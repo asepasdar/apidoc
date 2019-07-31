@@ -92,8 +92,11 @@ Response Headers:
 	x-xss-protection:"1; mode=block"
 	........
 ```
-There are so many informations, but take a look at **status: 200** in **_Response Headers_**, what is that mean? That's what we call **Response Status Code**. Status code indicates whether the request was successful, and if not, the type of error that occurred.
+There are so many informations, but take a look at **status: 200** in **_Response Headers_**, what is that mean? That is **Response Status Code**. **Status code** indicates whether the request was successful, and if not, the type of error that occurred.
 ![Postman Console](Assets/StatusCode.png)
+There are several **Status Code**, but here's list of Status Code that you really need to know
+| Code | Description  				|
+|------|----------------------------|
 
 ### API - Request and Response Body
 >[TODO] Request and Response Body
