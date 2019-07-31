@@ -160,10 +160,10 @@ This first one is to get all users data and the second one is to get specific us
 
 #### Use of the right HTTP methods
 APIs have various methods to indicate the type of operation we are going to perform with this API. We need to make sure we use the right HTTP method for a given operation.
-- GET — To get a data or list of data.
-- POST — To create a data or list of data (in some cases to get a data or list of data).
-- PUT/PATCH — To update the existing data or list of data.
-- DELETE - To delete the existing data or the list of data.
+- **_GET_** — To get a data or list of data.
+- **_POST_** — To create a data or list of data (in some cases to get a data or list of data).
+- **_PUT/PATCH_** — To update the existing data or list of data.
+- **_DELETE_** - To delete the existing data or the list of data.
 
 #### Use pagination (limit)
 Use of **pagination** is a must when you expose an API which might return huge data, and if proper load balancing is not done, **the consumer might end up bringing down the service**. We always need to keep in mind that the API design should be full proof and foolproof. Use of **limit** and **offset** is recommended here. For example, /users?limit=25&offset=50. It is also advised to keep a default limit and default offset.
