@@ -93,7 +93,7 @@ Response Headers:
 	........
 ```
 There are so many informations, but take a look at **status: 200** in **_Response Headers_**, what is that mean? That's what we call **Response Status Code**. Status code indicates whether the request was successful, and if not, the type of error that occurred.
-![Postman Console](Assets/StatusCode.gif)
+<img align="center" src="http://gate.git/asep.darmawan/apidoc/raw/master/Assets/StatusCode.gif">
 
 ### API - Request and Response Body
 >[TODO] Request and Response Body
