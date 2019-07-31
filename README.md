@@ -65,7 +65,7 @@ Headers in a Request API usually contains some kind of information to the format
 Maybe it's a little bit confusing, what is it looks like? Lets open **Postman** [[Download]](https://www.getpostman.com/downloads/), and choose **Postman Console** on the bottom of the application **(Ctrl + Alt + C)**.
 ![Postman Console](Assets/PostmanConsole.PNG)
 After that, let's fill the input field with **https://www.reddit.com/r/all/.json** and then click **Send**. Wait for a couple seconds, and let's take a look on **Postman Console**. Some kind of information would appear in your **Postman Console**, just like image below.
-![Postman Console](Assets/PostmanRequest.PNG)
+![Postman Request](Assets/PostmanRequest.PNG)
 Let's take a look on **_Request Headers_**, as you can see there are some kind of information. These informations are **_Request Headers_**, **Headers** are transmitted after the request line (in case of a request HTTP message) or the response line (in case of a response HTTP message), which is the first line of a message.
 ```
 Request Headers:
@@ -94,7 +94,7 @@ Response Headers:
 	........
 ```
 There are so many informations, but take a look at **status: 200** in **_Response Headers_**, what is that mean? That is **Response Status Code**. **Status code** indicates whether the request was successful, and if not, the type of error that occurred.
-![Postman Console](Assets/StatusCode.png)
+![Status Code](Assets/StatusCode.png)
 
 There are several **Status Code**, but these are list of Status Code that you really need to know
 
@@ -111,10 +111,19 @@ There are several **Status Code**, but these are list of Status Code that you re
 >[TODO] Explain what is reqeust/response body
 
 ### Principles of Designing APIs
-Now let's understand the principles we should follow while designing the RESTful APIs.
+Now let's understand the principles we should follow while designing the **_RESTful APIs_**.
+##### Authorization
+This is most important, before users can make requests with your **_API_**, they’ll usually need to register for an **_API_** key or learn other ways to authenticate the requests. **_APIs_** vary in the way they authenticate users. Some APIs require you to include an API key in the request header, while other APIs require elaborate security due to the need to protect sensitive data, prove identity, and ensure the requests aren’t tampered with.
+- **Authentication:** Refers to proving correct identity
+- **Authorization:** Refers to allowing a certain action
+![Status Code](Assets/auth.svg)
+
 ##### Keep it simple
-We need to make sure that the URL of the API is simple. For example, if we want to design APIs for return data users, it should be designed like:
+We need to make sure that the URL of the API is simple. For example, if we want to design APIs for return data users, it should be designed like this:
 ```
 /users
 /users/123
 ```
+This first one is to get all users data and the second one is to get specific user.
+
+##### Use nouns and not the verbs
