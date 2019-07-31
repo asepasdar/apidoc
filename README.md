@@ -108,3 +108,13 @@ There are several **Status Code**, but these are list of Status Code that you re
 |500             |Internal Server Error: this status indicates that an error occurred on the server and it was unable to respond. |
 
 ##### **What is Request/Response Body?**
+>[TODO] Explain what is reqeust/response body
+
+### Principles of Designing APIs
+Now let's understand the principles we should follow while designing the RESTful APIs.
+#### Keep it simple
+We need to make sure that the URL of the API is simple. For example, if we want to design APIs for return data users, it should be designed like:
+```
+/users
+/users/123
+```
