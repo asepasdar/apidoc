@@ -1,4 +1,11 @@
 # Introduction API (Application Programming Interface)
+## Table of Content
+1. What is API?
+	- [General Overview](#general-overview)
+	- [Why would we need an API?](#why-would-we-need-an-api)
+2. A Deeper Dive into API
+	- [API - What is JSON and why do we use it in API?](#api-what-is-json-and-why-do-we-use-it-in-api)
+
 ## General Overview
 Connectivity is an amazing thing, by now we're all used the instant connectivity that puts the world at our fingertips from desktop or devices. We can purchase, post, pin, and pick anything, anywhere, **but how does it happen? how does data get from here to there? how do different devices and applications connect with each other?** The unsung hero of our connected world is **_Application Programming Interface_** or **_API_**
 
