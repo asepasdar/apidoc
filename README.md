@@ -112,7 +112,7 @@ There are several **Status Code**, but these are list of Status Code that you re
 
 ### Principles of Designing APIs
 Now let's understand the principles we should follow while designing the RESTful APIs.
-#### Keep it simple
+##### Keep it simple
 We need to make sure that the URL of the API is simple. For example, if we want to design APIs for return data users, it should be designed like:
 ```
 /users
