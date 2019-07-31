@@ -98,7 +98,7 @@ There are several **Status Code**, but here's list of Status Code that you reall
 
 
 |Code            |Description                                                  |
-|----------------|-------------------------------|-----------------------------|
+|----------------|-------------------------------------------------------------|
 
 ### API - Request and Response Body
 >[TODO] Request and Response Body
