@@ -58,14 +58,14 @@ Normal web browser doesn't allow you to put data in the body of a request, but y
 ### API - Request and Response Headers
 What is **Headers** in **_API_**? To say briefly headers are some kind of information about your **_Request_** and **_Response API_**. They define the operating parameters of an **_HTTP transaction_**. For security reasons, some **_Headers_** can only be controlled by the user agent **(We won't talk about this)**. 
 
-Headers in a Request API usually contains some kind of information to the format of the request and allowed format of the response **_(XML, JSON, etc)_**, or to give some kind of **_Authentication_**. A little bit different, Response headers provide information about the status of the request and format of the response.
+Headers in a Request API usually contains some kind of information to the format of the request and allowed format of the response **_(XML, JSON, etc)_**, or to give some kind of **_Authentication_**. A little bit different, **_Response Headers_** provide information about the status of the request and format of the response.
 >**Note**: We'll talk about **_Authentication_** later.
 
 Maybe it's a little bit confusing, what is it looks like? Lets open **Postman** [[Download]](https://www.getpostman.com/downloads/), and choose **Postman Console** on the bottom of the application **(Ctrl + Alt + C)**.
 ![Postman Console](Assets/PostmanConsole.PNG)
 After that, let's fill the input field with **https://www.reddit.com/r/all/.json** and then click **Send**. Wait for a couple seconds, and let's take a look on **Postman Console**. Some kind of information would appear in your **Postman Console**, just like image below.
 ![Postman Console](Assets/PostmanRequest.PNG)
-Let's take a look on **Request Headers**, as you can see there are some kind of information. These informations are Request Headers, Headers are transmitted after the request line (in case of a request HTTP message) or the response line (in case of a response HTTP message), which is the first line of a message.
+Let's take a look on **_Request Headers_**, as you can see there are some kind of information. These informations are **_Request Headers_**, **Headers** are transmitted after the request line (in case of a request HTTP message) or the response line (in case of a response HTTP message), which is the first line of a message.
 ```
 Request Headers:
 	User-Agent:"PostmanRuntime/7.15.2"
@@ -92,6 +92,8 @@ Response Headers:
 	x-xss-protection:"1; mode=block"
 	........
 ```
+There are so many informations, but take a look at **status: 200** in **_Response Headers_**, what is that mean? That's what we call **Response Status Code**. Status code indicates whether the request was successful, and if not, the type of error that occurred.
+![Postman Console](Assets/StatusCode.gif)
 
 ### API - Request and Response Body
 >[TODO] Request and Response Body
