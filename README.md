@@ -56,7 +56,11 @@ Normal web browser doesn't allow you to put data in the body of a request, but y
 >**Note**: We'll talk about **_request and response headers_** later
 
 ### API - Request and Response Headers
->[TODO] Request and Response Headers
+What is **Headers** in **_API_**? To say briefly headers is some kind of information about your **_Request_** and **_Response API_**. They define the operating parameters of an **_HTTP transaction_**. For security reasons, some **_Headers_** can only be controlled by the user agent. 
+
+Headers in a Request API usually contains some kind of information to the format of the request and allowed format of the response **_(XML, JSON, etc)_**, or to give some kind of **_Authentication_**. A little bit different, Response headers provide information about the status of the request and format of the response.
+>**Note**: We'll talk about **_Authentication_** later
+I
 
 ### API - Request and Response Body
 >[TODO] Request and Response Body
