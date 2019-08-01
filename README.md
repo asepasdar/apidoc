@@ -25,7 +25,7 @@ In basic terms, **APIs just allow applications to communicate with one another**
 
 
 
->**Note**: This is Restful API
+>**Note**: Fokus ke penjelasan Restful API
 
 **_API_** is not the database or even the server, it is the code that governs the **_access point(s)_** for the server. To speak plainly an **_API_** is the messenger that takes request and tells the system what you want to do, and then returns the response back to you. . When people talk about **_"API"_**, they sometimes generalize and actually mean "a publicly available web-based API that returns data, likely in JSON or XML".
 
