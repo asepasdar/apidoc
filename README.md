@@ -141,14 +141,22 @@ This is most important, before users can make requests with your **_API_**, they
 - **Authentication:** Refers to proving correct identity
 - **Authorization:** Refers to allowing a certain action
 
-![Status Code](Assets/auth.png)
+![Authentication & Authorization](Assets/auth.png)
 
 An API might authenticate you but not authorize you to make a certain request. **Why do APIs even need authentication?** For read-only **_APIs_**, sometimes users don’t need keys. But most commercial APIs do require authorization in the form of **_API_** keys or other methods. If you didn’t have any **security** with your **_API_**, users could make unlimited amounts of **_API_** calls without any kind of registration. Allowing unrestricted requests would make a revenue model for your **_API_** difficult. 
 
-Additionally, without authentication, there wouldn’t be an easy way to associate requests with specific user data. And there wouldn’t be a way to protect against requests from malicious users that might delete another user’s data (such as by making DELETE requests on another’s account). There are several methods for authorization, but most often used are **_API keys_**, and **_OAuth or OAuth2_** (We won't talk about this).
+Additionally, without authentication, there wouldn’t be an easy way to associate requests with specific user data. And there wouldn’t be a way to protect against requests from malicious users that might delete another user’s data (such as by making DELETE requests on another’s account). There are several methods for authorization, but most often used are **_API keys_**, and **_OAuth or OAuth2_**.
 
+**_API Keys_** 
 **_API Keys_** require you to sign up for an API key in order to use when you send **_Request to API_**. The API key mainly functions as a way to identify the person making the API call (authenticating you to use the API). The API key might also be associated with a specific app that you register.
-![Status Code](Assets/ApiKeys.png)
+![API Keys](Assets/ApiKeys.png)
+
+**_OAuth 2.0_**
+On the other hand, one popular method for authenticating and authorizing users is **_OAuth 2.0_**. This approach relies on an authentication server to communicate with the API server to grant access. You often see **_OAuth 2.0_** when you’re using a site and are prompted to log in using a service like **Twitter, Google, or Facebook**. There are a few varieties of OAuth — namely, **_one-legged OAuth_** and **_three-legged OAuth_**. **_One-legged OAuth_** is used when you don’t have sensitive data to secure. This might be the case if you’re just retrieving general, read-only information. **_Three-legged OAuth_** is used when you need to protect sensitive data. Three groups are interacting in this scenario:
+- The user or app
+- The authentication server
+- The resource server (API server)
+![OAuth](Assets/OAuth.png)
 
 #### **Keep it simple**
 We need to make sure that the URL of the API is simple. For example, if we want to design APIs for return data users, it should be designed like this:
