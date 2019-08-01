@@ -17,30 +17,47 @@
 	- [Supported formats](#supported-formats)
 
 ## General Overview
-Connectivity is an amazing thing, by now we're all used the instant connectivity that puts the world at our fingertips from desktop or devices. We can purchase, post, pin, and pick anything, anywhere, _but how does it happen? how does data get from here to there? how do different devices and applications connect with each other?_ The unsung hero of our connected world is **_API_**.
+**_API_** stands for **_application programming interface_**, which is a mechanism that allows the interaction between two applications using a set of rules. The interaction between applications refers to when one application wants to access data that another application holds or send the data to the said application. It can also be when one application is requesting services from another application. 
 
-API stands for application programming interface, which is a mechanism that allows the interaction between two applications using a set of rules. The interaction between applications refers to when one application wants to access data that another application holds or send the data to the said application. It can also be when one application is requesting services from another application.
+Think of an **API** like a menu in a restaurant. The menu provides a list of dishes you can order, along with a description of each dish. When you specify what menu items you want, the restaurant’s kitchen does the work and provides you with some finished dishes. You don’t know exactly how the kitchen prepares that food, and you don’t really need to. _But what's missing is the critical link to communicate your order to the kitchen and deliver your food back to your table,_ that's where the waiter or _API_ comes in. The waiter is the messenger that takes your order or (let's say this) _API Request_ to tells the kitchen what to do, and then delivers (let's say this) _API Response_ back to you, in this case **"food"**. There are several API, but 2 you should to know are : 
 
-There are several API, but 2 you should to know are : 
 - **Operating System API**, an API can specify the interface between an application and the operating system. For example your application can access machine capabilities only through this interface. One of benefit is different physical hardware can provide the same interface through this interface / Operating System API.
+
 - **Web Service API**
-	- SOAP (Simple Object Access Protocol): This is a protocol that uses XML as a format to transfer data. Its main function is to define the structure of the messages and method of communication. It also uses WSDL, or Web Services Definition Language, in a machine-readable document to publish a definition of its interface.
 
-	- XML-RPC: This is a protocol that uses a specific XML format to transfer data compared to SOAP that uses a proprietary XML format. It is also older than SOAP. XML-RPC uses minimum bandwidth and is much simpler than SOAP. Example
+	- **SOAP (Simple Object Access Protocol)**, this is a protocol that uses XML as a format to transfer data. Its main function is to define the structure of the messages and method of communication. It also uses WSDL, or Web Services Definition Language, in a machine-readable document to publish a definition of its interface.
 
+	- ***XML-RPC***, This is a protocol that uses a specific XML format to transfer data compared to SOAP that uses a proprietary XML format. It is also older than SOAP. XML-RPC uses minimum bandwidth and is much simpler than SOAP. Example :
+	```
+	<employees>
+  		<employee>
+    		<firstName>Becky</firstName> <lastName>Smith</lastName>
+    	<employee>
+    	<employee>
+    		<firstName>Will</firstName> <lastName>Smith</lastName>
+    	<employee>
+    	.....
+    <employees>
+	```
 
->**TODO**: jelaskan apa itu API, macam - macamnya (Restful API, SOAP API, dll)
+	- ***JSON-RPC***, This protocol is similar to XML-RPC but instead of using XML format to transfer data it uses JSON. Example : 
+	```
+	{
+		"employees":[
+ 			{ "firstName":"Becky", "lastName":"Smith" },
+ 			{ "firstName":"Will", "lastName":"Smith" }
+ 		]
+ 	}
+	```
 
-In basic terms, **APIs just allow applications to communicate with one another**. 
+	- **REST (REpresentational State Transfer)**, REST is not a protocol like the other web services, instead, it is a set of architectural principles. The REST service needs to have certain characteristics, including simple interfaces, which are resources identified easily within the request and manipulation of resources using the interface.
 
+## REST API
 
-
->**Note**: Fokus ke penjelasan Restful API
-
-**_API_** is not the database or even the server, it is the code that governs the **_access point(s)_** for the server. To speak plainly an **_API_** is the messenger that takes request and tells the system what you want to do, and then returns the response back to you. . When people talk about **_"API"_**, they sometimes generalize and actually mean "a publicly available web-based API that returns data, likely in JSON or XML".
+**_REST API_** is not the database or even the server, it is the code that governs the **_access point(s)_** for the server. To speak plainly an **_REST API_** is the messenger that takes request and tells the system what you want to do, and then returns the response back to you.
 
 ![How API works](Assets/HowAPIWorks.png)
-Think of an **API** like a menu in a restaurant. The menu provides a list of dishes you can order, along with a description of each dish. When you specify what menu items you want, the restaurant’s kitchen does the work and provides you with some finished dishes. You don’t know exactly how the kitchen prepares that food, and you don’t really need to. **_But what's missing is the critical link to communicate your order to the kitchen and deliver your food back to your table,_** that's where the waiter or **_API_** comes in. The waiter is the messenger that takes your order or (let's say this) **_API Request_** to tells the kitchen what to do, and then delivers (let's say this) **_API Response_** back to you, in this case **"food"**.
+
 
 
 ## Why would we need an API?
