@@ -183,10 +183,7 @@ APIs have various methods to indicate the type of operation we are going to perf
 Use of **pagination** is a must when you expose an API which might return huge data, and if proper load balancing is not done, **the consumer might end up bringing down the service**. We always need to keep in mind that the API design should be full proof and foolproof. Use of **limit** and **offset** is recommended here. For example, /users?limit=25&offset=50. It is also advised to keep a default limit and default offset.
 
 ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
+test
 ```
 
 #### Supported formats
