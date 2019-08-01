@@ -1,5 +1,5 @@
 # Introduction API (Application Programming Interface)
-##	Table of Content
+## Table of Content
 1. **What is API?**
 	- [General Overview](#general-overview)
 	- [Why would we need an API?](#why-would-we-need-an-api)
