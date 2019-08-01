@@ -2,8 +2,8 @@
 ## Table of Content
 1. **What is API?**
 	- [General Overview](#general-overview)
-	- [Why would we need an API?](#why-would-we-need-an-api)
-2. **A Deeper Dive into API**
+	- [What exactly is REST API?](#what-exactly-is-rest-api)
+2. **A Deeper Dive into REST API**
 	- [API - What is JSON and why do we use it in API?](#api-what-is-json-and-why-do-we-use-it-in-api)
 	- [API - HTTP Method](#api-http-method)
 	- [API - Request/Response Headers and Body](#api-requestresponse-headers-and-body)
@@ -56,7 +56,7 @@ Think of an _API_ like a menu in a restaurant. The menu provides a list of dishe
 
 	>**Note**: We will talk about **REST API** a little bit deeper.
 
-## _REST API_
+### What exactly is _REST API_?
 
 **_REST API_** is not the database or even the server, it is the code that governs the **_access point(s)_** for the server. To speak plainly an **_REST API_** is the messenger that takes request and tells the system what you want to do, and then returns the response back to you. Imagine the following scenario: You wants to access another app’s data or functionality. For example, perhaps you want to access all posts on reddit. You could email Reddit and ask for a spreadsheet file of all posts. But then you’d have to find a way to import that spreadsheet into your application, even if you stored them in a **_database_**, the data would become **outdated very quickly**. It would be impossible to keep it up to date. It would be better and simpler for Reddit to provide you a way to query their application to get that data, so that you can view or use it in your own application. It would stay up to date automatically that way. It doesn't have to be the case, but usually a _REST API_ works pretty much the same way a website does, you make a call from app/client to server and you get data back. 
 
@@ -75,8 +75,8 @@ Now what we get might appear to be gibberish to the human eye but it's actually 
 
 >Green : Response from **_API_**
 
-
-## API - What is JSON and why do we use it in API?
+## 2. A Deeper Dive into API
+### API - What is JSON and why do we use it in API?
 >**Note**: **A Deeper Dive into API**, it's a little bit "Technical". But this is really ~~josss~~ good if you want to know what happen when we **Request to API** and get **Response back from API**.
 
 Let's talk about _JSON_, as we mentioned before **it's structured data organized according to key value pairs**, let's take a look at this simple _JSON_
@@ -105,7 +105,7 @@ For example you make an _API Request_ to get data from restaurant "Puri Purr", _
 As you can see the key stays the same for each restaurant, but the value would be different. Each _API_ must define its own format for the data that it serves, **developers** typically read documentation provided by the _API_ “maintainer” (Reddit in this case) in order to learn the data format and use it properly. The question is **_why JSON?_** because it’s readable, it’s lightweight, but the most important, **it's comparatively easy** to get applications written in **other programming languages** to read it and generate it as well. This means that an _API_ that returns _JSON_ can be accessed by an application written in programming languages _C#, Java, Ruby, Python, JS, PHP and many more_, this makes an _API_ scalable and platform independent.
 
 
-## API - HTTP Method
+### API - HTTP Method
 Until now we've only been consuming data from **_API_**, but you can also write/send data to **_API_**, for example you can send **customer information, file upload, etc**, but before we go down that road we need to talk a little bit about the concept of **_HTTP request method_**. There are several **_HTTP method_** but the big two that you really need to know are **_GET_** and **_POST_**. A **_GET request_** is what you used to consumed data, that's what we've done so far by passing **_URL_** in order to get data from the **_API_**. But a **_POST Request_** a little bit different, this method requests that a web server accepts the data enclosed in the body of the request message, most likely for storing it. It is usually used when you need to send file or data/information.
 >**Note**: We'll talk about **_body request_** later.
 
@@ -113,7 +113,7 @@ Normal web browser doesn't allow you to put data in the body of a request, but y
 >**Note**: We'll talk about **_request and response headers_** later.
 
 
-## API - Request/Response Headers and Body
+### API - Request/Response Headers and Body
 #### **What is Request/Response Headers?**
 What is **Headers** in **_API_**? To say briefly headers are some kind of information about your **_Request_** and **_Response API_**. They define the operating parameters of an **_HTTP transaction_**. For security reasons, some **_Headers_** can only be controlled by the user agent **(We won't talk about this)**. 
 
@@ -175,9 +175,9 @@ After that click **"create app"**
 >**TODO**: Explain about Request/Response Body
 
 
-## Principles of Designing APIs
+## 3. Principles of Designing APIs
 Now let's understand the principles we should follow while designing the **_RESTful APIs_**.
-#### **_Authorization_**
+### **_Authorization_**
 This is most important, before users can make requests with your **_API_**, they’ll usually need to register for an **_API_** key or learn other ways to authenticate the requests. **_APIs_** vary in the way they authenticate users. Some APIs require you to include an API key in the request header, while other APIs require elaborate security due to the need to protect sensitive data, prove identity, and ensure the requests aren’t tampered with.
 - **Authentication:** Refers to proving correct identity
 - **Authorization:** Refers to allowing a certain action
@@ -205,7 +205,7 @@ First, the user sends over an **application key and secret** to a login page at 
 
 **Access tokens** not only provide authentication for the requester but also define the **permissions of how the user can use the AP**I. Additionally, **access tokens usually expire after a period of time and require the user to log in again**.
 
-#### **Keep it simple**
+### **Keep it simple**
 We need to make sure that the URL of the API is simple. For example, if we want to design APIs for return data users, it should be designed like this:
 ```
 /users
@@ -213,19 +213,19 @@ We need to make sure that the URL of the API is simple. For example, if we want 
 ```
 This first one is to get all users data and the second one is to get specific user.
 
-#### Use of the right HTTP methods
+### Use of the right HTTP methods
 APIs have various methods to indicate the type of operation we are going to perform with this API. We need to make sure we use the right HTTP method for a given operation.
 - **_GET_** — To get a data or list of data.
 - **_POST_** — To create a data or list of data (in some cases to get a data or list of data).
 - **_PUT/PATCH_** — To update the existing data or list of data.
 - **_DELETE_** - To delete the existing data or the list of data.
 
-#### Use pagination (limit)
+### Use pagination (limit)
 Use of **pagination** is a must when you expose an API which might return huge data, and if proper load balancing is not done, **the consumer might end up bringing down the service**. We always need to keep in mind that the API design should be full proof and foolproof. Use of **limit** and **offset** is recommended here. For example, /users?limit=25&offset=50. It is also advised to keep a default limit and default offset.	
 
-#### Supported formats
+### Supported formats
 It is also important to choose how your API responds. Most of the modern day applications should return JSON responses, unless your app still needs to get an XML response.
 
 
-#### Standard API Template in Agate
+### Standard API Template in Agate
 [[Game Backend Netcore Template]](http://gate.git/code-bank/game-backend-netcore-template)
