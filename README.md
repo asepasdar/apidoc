@@ -160,6 +160,10 @@ On the other hand, one popular method for authenticating and authorizing users i
 - The resource server (API server)
 ![OAuth](Assets/OAuth.png)
 
+First, the user sends over an **application key and secret** to a login page at the **authentication server**. If **authenticated**, the **authentication server** responds to the user with an **access token**. The user then makes a **request to the resource server (API server)**. The **access token** gets added to the **header of the API request**. The **API server checks the access token** in the user’s request and decides whether to authenticate the user.
+
+Access tokens not only provide authentication for the requester but also define the permissions of how the user can use the API. Additionally, access tokens usually expire after a period of time and require the user to log in again.
+
 #### **Keep it simple**
 We need to make sure that the URL of the API is simple. For example, if we want to design APIs for return data users, it should be designed like this:
 ```
