@@ -17,7 +17,17 @@
 	- [Supported formats](#supported-formats)
 
 ## General Overview
-Connectivity is an amazing thing, by now we're all used the instant connectivity that puts the world at our fingertips from desktop or devices. We can purchase, post, pin, and pick anything, anywhere, _but how does it happen? how does data get from here to there? how do different devices and applications connect with each other?_ The unsung hero of our connected world is **_Application Programming Interface_** or **_API_**
+Connectivity is an amazing thing, by now we're all used the instant connectivity that puts the world at our fingertips from desktop or devices. We can purchase, post, pin, and pick anything, anywhere, _but how does it happen? how does data get from here to there? how do different devices and applications connect with each other?_ The unsung hero of our connected world is **_API_**.
+
+API stands for application programming interface, which is a mechanism that allows the interaction between two applications using a set of rules. The interaction between applications refers to when one application wants to access data that another application holds or send the data to the said application. It can also be when one application is requesting services from another application.
+
+There are several API, but 2 you should to know are : 
+- **Operating System API**, an API can specify the interface between an application and the operating system. For example your application can access machine capabilities only through this interface. One of benefit is different physical hardware can provide the same interface through this interface / Operating System API.
+- **Web Service API**
+	- SOAP (Simple Object Access Protocol): This is a protocol that uses XML as a format to transfer data. Its main function is to define the structure of the messages and method of communication. It also uses WSDL, or Web Services Definition Language, in a machine-readable document to publish a definition of its interface.
+
+	- XML-RPC: This is a protocol that uses a specific XML format to transfer data compared to SOAP that uses a proprietary XML format. It is also older than SOAP. XML-RPC uses minimum bandwidth and is much simpler than SOAP. Example
+
 
 >**TODO**: jelaskan apa itu API, macam - macamnya (Restful API, SOAP API, dll)
 
@@ -145,6 +155,7 @@ So here's what we gonna do in this section, we gonna try to create new Post from
 ![Reddit Create App](Assets/RedditCreateApp.PNG)
 
 After that click **"create app"**
+>**TODO**: Explain about Request/Response Body
 
 
 ## Principles of Designing APIs
