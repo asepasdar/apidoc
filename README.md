@@ -134,7 +134,7 @@ There are several **Status Code**, but these are list of Status Code that you re
 Before we try about how **Request/Response Body** works, lets talk about the concept of **_Authentication_**, obviously you need to give some kind of **_Authentication_**. In this case let's say if you're gonna post something on **Reddit**, and what they're using for **Authentication** is what's known as **_OAuth_** or **_OAuth2_**. Basically what you're doing is getting credentials (kind of like a username and passsword) although they called a **client ID** and **client Secret**, and then you're exchanging those for what's known as an **_access token_** and then pass that **_access token_** to Reddit, Reddit knows that the **request** to make the Post is coming from you, so it **creates** a new Post from your account.
 
 So here's what we gonna do in this section, we gonna try to create new Post from our account with API. Maybe in real project you can implement this on your App. The first step is we need to register our App on Reddit to get client ID and client Secret (Register here: https://www.reddit.com/prefs/apps). Click **create another app...**,  and then fill the forms, see image below for detail information:
-![Reddit Create App](RedditCreateApp.PNG)
+![Reddit Create App](Assets/RedditCreateApp.PNG)
 
 
 ## Principles of Designing APIs
