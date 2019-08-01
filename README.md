@@ -87,7 +87,7 @@ Headers in a Request API usually contains some kind of information to the format
 
 Maybe it's a little bit confusing, what is it looks like? Lets open **Postman** [[Download]](https://www.getpostman.com/downloads/), and choose **Postman Console** on the bottom of the application **(Ctrl + Alt + C)**.
 ![Postman Console](Assets/PostmanConsole.PNG)
-After that, let's fill the input field with **https://www.reddit.com/r/all/.json** and then click **Send**. Wait for a couple seconds, and let's take a look on **Postman Console**. Some kind of information would appear in your **Postman Console**, just like image below.
+After that, let's fill the input field with **[https://www.reddit.com/r/all/.json](#)** and then click **Send**. Wait for a couple seconds, and let's take a look on **Postman Console**. Some kind of information would appear in your **Postman Console**, just like image below.
 ![Postman Request](Assets/PostmanRequest.PNG)
 Let's take a look on **_Request Headers_**, as you can see there are some kind of information. These informations are **_Request Headers_**, **Headers** are transmitted after the request line (in case of a request HTTP message) or the response line (in case of a response HTTP message), which is the first line of a message.
 ```
