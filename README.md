@@ -1,5 +1,5 @@
 # Introduction API (Application Programming Interface)
-## Table of Content
+##	Table of Content
 1. **What is API?**
 	- [General Overview](#general-overview)
 	- [Why would we need an API?](#why-would-we-need-an-api)
@@ -55,32 +55,30 @@ Think of an _API_ like a menu in a restaurant. The menu provides a list of dishe
 
 	>**Note**: We will talk about **REST API** a little bit deeper.
 
-## REST API
+## _REST API_
 
-**_REST API_** is not the database or even the server, it is the code that governs the **_access point(s)_** for the server. To speak plainly an **_REST API_** is the messenger that takes request and tells the system what you want to do, and then returns the response back to you.
-
-Imagine the following scenario: You wants to access another app’s data or functionality. For example, perhaps you want to access all posts on reddit. You could email Reddit and ask for a spreadsheet file of all posts. But then you’d have to find a way to import that spreadsheet into your application, even if you stored them in a **_database_**, the data would become **outdated very quickly**. It would be impossible to keep it up to date. It would be better and simpler for Reddit to provide you a way to query their application to get that data, so that you can view or use it in your own application. It would stay up to date automatically that way. It doesn't have to be the case, but usually a _REST API_ works pretty much the same way a website does, you make a call from app/client to server and you get data back. 
+**_REST API_** is not the database or even the server, it is the code that governs the **_access point(s)_** for the server. To speak plainly an **_REST API_** is the messenger that takes request and tells the system what you want to do, and then returns the response back to you. Imagine the following scenario: You wants to access another app’s data or functionality. For example, perhaps you want to access all posts on reddit. You could email Reddit and ask for a spreadsheet file of all posts. But then you’d have to find a way to import that spreadsheet into your application, even if you stored them in a **_database_**, the data would become **outdated very quickly**. It would be impossible to keep it up to date. It would be better and simpler for Reddit to provide you a way to query their application to get that data, so that you can view or use it in your own application. It would stay up to date automatically that way. It doesn't have to be the case, but usually a _REST API_ works pretty much the same way a website does, you make a call from app/client to server and you get data back. 
 
 ![How API works](Assets/HowAPIWorks.png)
 
-The best way to show many similarities between a _REST API_ call and normal web page can be found with Reddit **_Public API (meaning one that does not require authentication/login)_**, lets take a look this **_https://www.reddit.com/r/all/ (REDDIT POSTS)_**, and we're all familiar with what Reddit Posts looks like. But now let's change it to **_https://www.reddit.com/r/all/.json (API REDDIT POSTS)_**, and what we get is a **response** to our **_API request_**. Basically we've made an **_API request_** in our browser to **_Reddit's Public API_**.
+The best way to show many similarities between a _REST API_ call and normal web page can be found with Reddit **_Public API (meaning one that does not require authentication/login)_**, lets take a look this **_https://www.reddit.com/r/all/ (REDDIT POSTS)_**, and we're all familiar with what Reddit Posts looks like. But now let's change it to **_https://www.reddit.com/r/all/.json (API REDDIT POSTS)_**, and what we get is a **response** to our _API request_. Basically we've made an _API request_ in our browser to **_Reddit's Public API_**.
 
 >**Note**: _API Response_ might be not the same with image below
 
 ![Response](Assets/JSON.PNG)
-Now what we get might appear to be gibberish to the human eye but it's actually **_JSON (Javascript Object Notation)_ formatted data**, it's structured data organized according to key value pairs. You can make an **_API Request_** with **Postman** [[Download]](https://www.getpostman.com/downloads/) to get more **"easy to read"** result, if already have it you can make an **_API Request_** like this image below
+Now what we get might appear to be gibberish to the human eye but it's actually **_JSON (Javascript Object Notation)_ formatted data**, it's structured data organized according to key value pairs. You can make an _API Request_ with **Postman** [[Download]](https://www.getpostman.com/downloads/) to get more **"easy to read"** result, if already have it you can make an _API Request_ like this image below:
 ![JSON Formatter](Assets/Postman.PNG)
->Blue pen  : **_HTTP_** method set to **_GET_** (we'll talk about HTTP method later)
+>Blue  : **_HTTP_** method set to **_GET_** (we'll talk about HTTP method later)
 
->Red pen   : **_Reddit's API_**
+>Red   : **_Reddit's API_**
 
->Green pen : Response from **_API_**
+>Green : Response from **_API_**
 
 
 ## API - What is JSON and why do we use it in API?
 >**Note**: **A Deeper Dive into API**, it's a little bit "Technical". But this is really ~~josss~~ good if you want to know what happen when we **Request to API** and get **Response back from API**.
 
-Let's talk about **_JSON_**, as we mentioned before **it's structured data organized according to key value pairs**, let's take a look at this simple **_JSON_**
+Let's talk about _JSON_, as we mentioned before **it's structured data organized according to key value pairs**, let's take a look at this simple _JSON_
 ```
 "restaurant": {
 	"name": "Fish Witch",
@@ -91,8 +89,8 @@ Let's talk about **_JSON_**, as we mentioned before **it's structured data organ
 	"email": "info@example.com"
 }
 ```
-Neat. This is fairly easy to read — our data is stored as key/value pairs. This means that we can see the key on the left, in this case **_name, address, zipcode, website, email_**, and the value on the right, in this case **value of "name" is _Fish Witch_** and so on. A different Restaurant would have a different value, but its key would be the same — it would always have a **_name, address, zipcode, website, email_**.
-For example you make an **_API Request_** to get data from restaurant "Puri Purr", **_API Response_** would be like this:
+Neat. This is fairly easy to read — our data is stored as key/value pairs. This means that we can see the key on the left, in this case **_name, address, zipcode, website, email_**, and the value on the right, in this case value of **"name"** is **"Fish Witch"** and so on. A different Restaurant would have a different value, but its key would be the same — it would always have a _name, address, zipcode, website, email_.
+For example you make an _API Request_ to get data from restaurant "Puri Purr", _API Response_ would be like this:
 ```
 "restaurant": {
 	"name": "Puri Purr",
@@ -103,7 +101,7 @@ For example you make an **_API Request_** to get data from restaurant "Puri Purr
 	"email": "contact@puripurr.com"
 }
 ``` 
-As you can see the key stays the same for each restaurant, but the value would be different. Each **_API_** must define its own format for the data that it serves, **developers** typically read documentation provided by the **_API_ “maintainer”** (Reddit in this case) in order to learn the data format and use it properly. The question is **_why JSON?_** because it’s readable, it’s lightweight, but the most important, **it's comparatively easy** to get applications written in **other programming languages** to read it and generate it as well. This means that an **_API_** that returns **_JSON_** can be accessed by an application written in programming languages C#, Java, Ruby, Python, JS, PHP and many more, this makes an API scalable and platform independent.
+As you can see the key stays the same for each restaurant, but the value would be different. Each _API_ must define its own format for the data that it serves, **developers** typically read documentation provided by the _API_ “maintainer” (Reddit in this case) in order to learn the data format and use it properly. The question is **_why JSON?_** because it’s readable, it’s lightweight, but the most important, **it's comparatively easy** to get applications written in **other programming languages** to read it and generate it as well. This means that an _API_ that returns _JSON_ can be accessed by an application written in programming languages _C#, Java, Ruby, Python, JS, PHP and many more_, this makes an _API_ scalable and platform independent.
 
 
 ## API - HTTP Method
