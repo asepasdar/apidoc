@@ -17,7 +17,7 @@
 	- [Supported formats](#supported-formats)
 
 ## General Overview
-Connectivity is an amazing thing, by now we're all used the instant connectivity that puts the world at our fingertips from desktop or devices. We can purchase, post, pin, and pick anything, anywhere, **but how does it happen? how does data get from here to there? how do different devices and applications connect with each other?** The unsung hero of our connected world is **_Application Programming Interface_** or **_API_**
+Connectivity is an amazing thing, by now we're all used the instant connectivity that puts the world at our fingertips from desktop or devices. We can purchase, post, pin, and pick anything, anywhere, _but how does it happen? how does data get from here to there? how do different devices and applications connect with each other?_ The unsung hero of our connected world is **_Application Programming Interface_** or **_API_**
 
 In basic terms, **APIs just allow applications to communicate with one another**. **_API_** is not the database or even the server, it is the code that governs the **_access point(s)_** for the server. To speak plainly an **_API_** is the messenger that takes request and tells the system what you want to do, and then returns the response back to you. . When people talk about **_"API"_**, they sometimes generalize and actually mean "a publicly available web-based API that returns data, likely in JSON or XML".
 
@@ -26,7 +26,7 @@ Think of an **API** like a menu in a restaurant. The menu provides a list of dis
 
 
 ## Why would we need an API?
-Imagine the following scenario: You wants to access another **app’s data** or **functionality**. For example, perhaps you want to access all posts on reddit. You could email Reddit and ask for a spreadsheet file of all posts. But then you’d have to find a way to import that spreadsheet into your application, even if you stored them in a **_database_**, the data would become **outdated very quickly**. It would be impossible to keep it up to date. It would be better and simpler for Reddit to provide you a way to query their application to get that data, so that you can view or use it in your own application. It would stay up to date automatically that way. 
+Imagine the following scenario: You wants to access another app’s data or functionality. For example, perhaps you want to access all posts on reddit. You could email Reddit and ask for a spreadsheet file of all posts. But then you’d have to find a way to import that spreadsheet into your application, even if you stored them in a **_database_**, the data would become **outdated very quickly**. It would be impossible to keep it up to date. It would be better and simpler for Reddit to provide you a way to query their application to get that data, so that you can view or use it in your own application. It would stay up to date automatically that way. 
 
 Reddit has **_Public API (meaning one that does not require authentication/login)_** directly in your browser, lets take a look this **_[API REDDIT POSTS](https://www.reddit.com/r/all/.json)_** , and what we get is a **response** to our **_API request_**. Basically we've made an **_API request_** in our browser to **_Reddit's Public API_**.
 >These data below are raw version of the information that you can see at **_~~API~~ [REDDIT POSTS](https://www.reddit.com/r/all/)_**.
@@ -135,6 +135,8 @@ Before we try about how **Request/Response Body** works, lets talk about the con
 
 So here's what we gonna do in this section, we gonna try to create new Post from our account with API. Maybe in real project you can implement this on your App. The first step is we need to register our App on Reddit to get client ID and client Secret (Register here: https://www.reddit.com/prefs/apps). Click **"create another app..."**,  and then fill the forms, see image below for detail information:
 ![Reddit Create App](Assets/RedditCreateApp.PNG)
+
+After that click **"create app"**
 
 
 ## Principles of Designing APIs
