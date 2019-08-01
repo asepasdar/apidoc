@@ -77,12 +77,12 @@ Now what we get might appear to be gibberish to the human eye but it's actually 
 
 >Green : Response from **_API_**
 
-For your information that REST API always contains these components and we will talk a little bit deeper about these : 
-- HTTP METHOD (GET/POST/PUT/DELETE)
-- Request Headers
-- Request Body (Optional)
-- Response Headers
-- Response Body
+For your information that _REST API_ always contains these components and we will talk a little bit deeper about these : 
+- **_HTTP METHOD (GET/POST/PUT/DELETE)_**
+- **_Request Headers_**
+- **_Request Body_** (Optional)
+- **_Response Headers_**
+- **_Response Body_**
 
 
 ## 2. A Deeper Dive into _REST API_
