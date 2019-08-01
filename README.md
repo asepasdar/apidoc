@@ -19,9 +19,9 @@
 ## General Overview
 **_API_** stands for **_application programming interface_**, which is a mechanism that allows the interaction between two applications using a set of rules. The interaction between applications refers to when one application wants to access data that another application holds or send the data to the said application. It can also be when one application is requesting services from another application. 
 
-Think of an **API** like a menu in a restaurant. The menu provides a list of dishes you can order, along with a description of each dish. When you specify what menu items you want, the restaurant’s kitchen does the work and provides you with some finished dishes. You don’t know exactly how the kitchen prepares that food, and you don’t really need to. _But what's missing is the critical link to communicate your order to the kitchen and deliver your food back to your table,_ that's where the waiter or _API_ comes in. The waiter is the messenger that takes your order or (let's say this) _API Request_ to tells the kitchen what to do, and then delivers (let's say this) _API Response_ back to you, in this case **"food"**. There are several API, but 2 you should to know are : 
+Think of an _API_ like a menu in a restaurant. The menu provides a list of dishes you can order, along with a description of each dish. When you specify what menu items you want, the restaurant’s kitchen does the work and provides you with some finished dishes. You don’t know exactly how the kitchen prepares that food, and you don’t really need to. _But what's missing is the critical link to communicate your order to the kitchen and deliver your food back to your table,_ that's where the waiter or _API_ comes in. The waiter is the messenger that takes your order or (let's say this) _API Request_ to tells the kitchen what to do, and then delivers (let's say this) _API Response_ back to you, in this case **"food"**. There are several _API_, but 2 you should to know are : 
 
-- **Operating System API**, an API can specify the interface between an application and the operating system. For example your application can access machine capabilities only through this interface. One of benefit is different physical hardware can provide the same interface through this interface / Operating System API.
+- **Operating System API**, an _API_ can specify the interface between an application and the operating system. For example your application can access machine capabilities only through this interface. One of benefit is different physical hardware can provide the same interface through this interface / Operating System _API_.
 
 - **Web Service API**
 
@@ -45,26 +45,27 @@ Think of an **API** like a menu in a restaurant. The menu provides a list of dis
 	{
 		"employees":[
  			{ "firstName":"Becky", "lastName":"Smith" },
- 			{ "firstName":"Will", "lastName":"Smith" }
+ 			{ "firstName":"Will", "lastName":"Smith" },
+ 			......
  		]
  	}
 	```
 
-	- **REST (REpresentational State Transfer)**, REST is not a protocol like the other web services, instead, it is a set of architectural principles. The REST service needs to have certain characteristics, including simple interfaces, which are resources identified easily within the request and manipulation of resources using the interface.
+	- **REST (REpresentational State Transfer)**, REST is not a protocol like the other web services, instead, it is a set of architectural principles. The REST service needs to have certain characteristics, including simple interfaces, which are resources identified easily within the request and manipulation of resources using the interface. It can transfer data with JSON format or XML Format.
+
+	>**Note**: We will talk about **REST API** a little bit deeper.
 
 ## REST API
 
 **_REST API_** is not the database or even the server, it is the code that governs the **_access point(s)_** for the server. To speak plainly an **_REST API_** is the messenger that takes request and tells the system what you want to do, and then returns the response back to you.
 
+Imagine the following scenario: You wants to access another app’s data or functionality. For example, perhaps you want to access all posts on reddit. You could email Reddit and ask for a spreadsheet file of all posts. But then you’d have to find a way to import that spreadsheet into your application, even if you stored them in a **_database_**, the data would become **outdated very quickly**. It would be impossible to keep it up to date. It would be better and simpler for Reddit to provide you a way to query their application to get that data, so that you can view or use it in your own application. It would stay up to date automatically that way. It doesn't have to be the case, but usually a _REST API_ works pretty much the same way a website does, you make a call from app/client to server and you get data back. 
+
 ![How API works](Assets/HowAPIWorks.png)
 
+The best way to show many similarities between a _REST API_ call and normal web page can be found with Reddit **_Public API (meaning one that does not require authentication/login)_**, lets take a look this **_https://www.reddit.com/r/all/ (REDDIT POSTS)_**, and we're all familiar with what Reddit Posts looks like. But now let's change it to **_https://www.reddit.com/r/all/.json (API REDDIT POSTS)_**, and what we get is a **response** to our **_API request_**. Basically we've made an **_API request_** in our browser to **_Reddit's Public API_**.
 
-
-## Why would we need an API?
-Imagine the following scenario: You wants to access another app’s data or functionality. For example, perhaps you want to access all posts on reddit. You could email Reddit and ask for a spreadsheet file of all posts. But then you’d have to find a way to import that spreadsheet into your application, even if you stored them in a **_database_**, the data would become **outdated very quickly**. It would be impossible to keep it up to date. It would be better and simpler for Reddit to provide you a way to query their application to get that data, so that you can view or use it in your own application. It would stay up to date automatically that way. 
-
-Reddit has **_Public API (meaning one that does not require authentication/login)_** directly in your browser, lets take a look this **_[API REDDIT POSTS](https://www.reddit.com/r/all/.json)_** , and what we get is a **response** to our **_API request_**. Basically we've made an **_API request_** in our browser to **_Reddit's Public API_**.
->These data below are raw version of the information that you can see at **_~~API~~ [REDDIT POSTS](https://www.reddit.com/r/all/)_**.
+>**Note**: _API Response_ might be not the same with image below
 
 ![Response](Assets/JSON.PNG)
 Now what we get might appear to be gibberish to the human eye but it's actually **_JSON (Javascript Object Notation)_ formatted data**, it's structured data organized according to key value pairs. You can make an **_API Request_** with **Postman** [[Download]](https://www.getpostman.com/downloads/) to get more **"easy to read"** result, if already have it you can make an **_API Request_** like this image below
