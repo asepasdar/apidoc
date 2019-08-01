@@ -162,7 +162,7 @@ On the other hand, one popular method for authenticating and authorizing users i
 
 First, the user sends over an **application key and secret** to a login page at the **authentication server**. If **authenticated**, the **authentication server** responds to the user with an **access token**. The user then makes a **request to the resource server (API server)**. The **access token** gets added to the **header of the API request**. The **API server checks the access token** in the user’s request and decides whether to authenticate the user.
 
-Access tokens not only provide authentication for the requester but also define the permissions of how the user can use the API. Additionally, access tokens usually expire after a period of time and require the user to log in again.
+**Access tokens** not only provide authentication for the requester but also define the **permissions of how the user can use the AP**I. Additionally, **access tokens usually expire after a period of time and require the user to log in again**.
 
 #### **Keep it simple**
 We need to make sure that the URL of the API is simple. For example, if we want to design APIs for return data users, it should be designed like this:
@@ -181,6 +181,13 @@ APIs have various methods to indicate the type of operation we are going to perf
 
 #### Use pagination (limit)
 Use of **pagination** is a must when you expose an API which might return huge data, and if proper load balancing is not done, **the consumer might end up bringing down the service**. We always need to keep in mind that the API design should be full proof and foolproof. Use of **limit** and **offset** is recommended here. For example, /users?limit=25&offset=50. It is also advised to keep a default limit and default offset.
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+```
 
 #### Supported formats
 It is also important to choose how your API responds. Most of the modern day applications should return JSON responses, unless your app still needs to get an XML response.
