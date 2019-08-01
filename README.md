@@ -19,7 +19,15 @@
 ## General Overview
 Connectivity is an amazing thing, by now we're all used the instant connectivity that puts the world at our fingertips from desktop or devices. We can purchase, post, pin, and pick anything, anywhere, _but how does it happen? how does data get from here to there? how do different devices and applications connect with each other?_ The unsung hero of our connected world is **_Application Programming Interface_** or **_API_**
 
-In basic terms, **APIs just allow applications to communicate with one another**. **_API_** is not the database or even the server, it is the code that governs the **_access point(s)_** for the server. To speak plainly an **_API_** is the messenger that takes request and tells the system what you want to do, and then returns the response back to you. . When people talk about **_"API"_**, they sometimes generalize and actually mean "a publicly available web-based API that returns data, likely in JSON or XML".
+>**TODO**: jelaskan apa itu API, macam - macamnya (Restful API, SOAP API, dll)
+
+In basic terms, **APIs just allow applications to communicate with one another**. 
+
+
+
+>**Note**: This is Restful API
+
+**_API_** is not the database or even the server, it is the code that governs the **_access point(s)_** for the server. To speak plainly an **_API_** is the messenger that takes request and tells the system what you want to do, and then returns the response back to you. . When people talk about **_"API"_**, they sometimes generalize and actually mean "a publicly available web-based API that returns data, likely in JSON or XML".
 
 ![How API works](Assets/HowAPIWorks.png)
 Think of an **API** like a menu in a restaurant. The menu provides a list of dishes you can order, along with a description of each dish. When you specify what menu items you want, the restaurant’s kitchen does the work and provides you with some finished dishes. You don’t know exactly how the kitchen prepares that food, and you don’t really need to. **_But what's missing is the critical link to communicate your order to the kitchen and deliver your food back to your table,_** that's where the waiter or **_API_** comes in. The waiter is the messenger that takes your order or (let's say this) **_API Request_** to tells the kitchen what to do, and then delivers (let's say this) **_API Response_** back to you, in this case **"food"**.
