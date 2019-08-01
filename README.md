@@ -62,22 +62,32 @@ Think of an _API_ like a menu in a restaurant. The menu provides a list of dishe
 
 ![How API works](Assets/HowAPIWorks.png)
 
-The best way to show many similarities between a _REST API_ call and normal web page can be found with Reddit **_Public API (meaning one that does not require authentication/login)_**, lets take a look this **_https://www.reddit.com/r/all/ (REDDIT POSTS)_**, and we're all familiar with what Reddit Posts looks like. But now let's change it to **_https://www.reddit.com/r/all/.json (API REDDIT POSTS)_**, and what we get is a **response** to our _API request_. Basically we've made an _API request_ in our browser to **_Reddit's Public API_**.
+The best way to show many similarities between a _REST API_ call and normal web page can be found with Reddit **_Public API (meaning one that does not require authentication/login)_**, lets take a look this **_https://www.reddit.com/r/all/ (REDDIT POSTS)_**, and we're all familiar with what Reddit Posts looks like. But now let's change it to **_https://www.reddit.com/r/all/.json (API REDDIT POSTS)_**, and what we get is a **response** to our _API request_. Basically we've made an _API request_ in our browser to **_Reddit's Public API_**. This is happen becuase _REST API_ explicitly takes advantage of HTTP method defined by the RFC 2616 protocol. They use **_GET_** to retrieve a data, _PUT_ to change the state or update _data_, which can be an _object_, file or _block_, **_POST_** to create that data, and **_DELETE_** to remove it.
+
+>**Note**: We'll talk about HTTP method later.
 
 >**Note**: _API Response_ might be not the same with image below
 
 ![Response](Assets/JSON.PNG)
 Now what we get might appear to be gibberish to the human eye but it's actually **_JSON (Javascript Object Notation)_ formatted data**, it's structured data organized according to key value pairs. You can make an _API Request_ with **Postman** [[Download]](https://www.getpostman.com/downloads/) to get more **"easy to read"** result, if already have it you can make an _API Request_ like this image below:
 ![JSON Formatter](Assets/Postman.PNG)
->Blue  : **_HTTP_** method set to **_GET_** (we'll talk about HTTP method later)
+>Blue  : **_HTTP_** method set to **_GET_**
 
 >Red   : **_Reddit's API_**
 
 >Green : Response from **_API_**
 
-## 2. A Deeper Dive into API
-### API - What is JSON and why do we use it in API?
->**Note**: **A Deeper Dive into API**, it's a little bit "Technical". But this is really ~~josss~~ good if you want to know what happen when we **Request to API** and get **Response back from API**.
+For your information that REST API always contains these components and we will talk a little bit deeper about these : 
+- HTTP METHOD (GET/POST/PUT/DELETE)
+- Request Headers
+- Request Body (Optional)
+- Response Headers
+- Response Body
+
+
+## 2. A Deeper Dive into _REST API_
+### _REST API_ - What is JSON and why do we use it in _REST API_?
+>**Note**: **A Deeper Dive into _REST API_**, it's a little bit "Technical". But this is really ~~josss~~ good if you want to know what happen when we **Request to _REST API_** and get **Response back from _REST API_**.
 
 Let's talk about _JSON_, as we mentioned before **it's structured data organized according to key value pairs**, let's take a look at this simple _JSON_
 ```
@@ -90,7 +100,7 @@ Let's talk about _JSON_, as we mentioned before **it's structured data organized
 	"email": "info@example.com"
 }
 ```
-Neat. This is fairly easy to read — our data is stored as key/value pairs. This means that we can see the key on the left, in this case **_name, address, zipcode, website, email_**, and the value on the right, in this case value of **"name"** is **"Fish Witch"** and so on. A different Restaurant would have a different value, but its key would be the same — it would always have a _name, address, zipcode, website, email_.
+Neat. This is fairly easy to read — our data is stored as key/value pairs. This means that we can see the key on the left, in this case _name, address, zipcode, website, email_, and the value on the right, in this case value of _"name"_ is _"Fish Witch"_ and so on. A different Restaurant would have a different value, but its key would be the same — it would always have a _name, address, zipcode, website, email_.
 For example you make an _API Request_ to get data from restaurant "Puri Purr", _API Response_ would be like this:
 ```
 "restaurant": {
@@ -102,11 +112,11 @@ For example you make an _API Request_ to get data from restaurant "Puri Purr", _
 	"email": "contact@puripurr.com"
 }
 ``` 
-As you can see the key stays the same for each restaurant, but the value would be different. Each _API_ must define its own format for the data that it serves, **developers** typically read documentation provided by the _API_ “maintainer” (Reddit in this case) in order to learn the data format and use it properly. The question is **_why JSON?_** because it’s readable, it’s lightweight, but the most important, **it's comparatively easy** to get applications written in **other programming languages** to read it and generate it as well. This means that an _API_ that returns _JSON_ can be accessed by an application written in programming languages _C#, Java, Ruby, Python, JS, PHP and many more_, this makes an _API_ scalable and platform independent.
+As you can see the key stays the same for each restaurant, but the value would be different. Each _API_ must define its own format for the data that it serves, **developers** typically read documentation provided by the _API_ “maintainer” (Reddit in this case) in order to learn the data format and use it properly. The question is **_why JSON?_** because it’s readable, it’s lightweight, but the most important, **it's comparatively easy** to get applications written in **other programming languages** to read it and generate it as well. This means that an _API_ that returns _JSON_ can be accessed by an application written in programming languages _C#, Java, Ruby, Python, JS, PHP and many more_, this makes an _API_ scalable and platform independent. 
 
 
 ### API - HTTP Method
-Until now we've only been consuming data from **_API_**, but you can also write/send data to **_API_**, for example you can send **customer information, file upload, etc**, but before we go down that road we need to talk a little bit about the concept of **_HTTP request method_**. There are several **_HTTP method_** but the big two that you really need to know are **_GET_** and **_POST_**. A **_GET request_** is what you used to consumed data, that's what we've done so far by passing **_URL_** in order to get data from the **_API_**. But a **_POST Request_** a little bit different, this method requests that a web server accepts the data enclosed in the body of the request message, most likely for storing it. It is usually used when you need to send file or data/information.
+Until now we've only been consuming data from _REST API_, but you can also write/send data to **_REST API_**, for example you can send **customer information, file upload, etc**, but before we go down that road we need to talk a little bit about the concept of **_HTTP request method_**. There are several **_HTTP method_** but the big two that you really need to know are **_GET_** and **_POST_**. A **_GET request_** is what you used to consumed data, that's what we've done so far by passing **_URL_** in order to get data from the **_API_**. But a **_POST Request_** a little bit different, this method requests that a web server accepts the data enclosed in the body of the request message, most likely for storing it. It is usually used when you need to send file or data/information.
 >**Note**: We'll talk about **_body request_** later.
 
 Normal web browser doesn't allow you to put data in the body of a request, but you can make a **_POST Request_** with **Postman** [[Download]](https://www.getpostman.com/downloads/), the nice thing about working with **Postman** is you can make more complex **_API Request_**, for example you can choose any one of the available **_HTTP Methods_** on the list, second you can put data in the body of a request, and the last one you can add headers to your **_API Request_**.
