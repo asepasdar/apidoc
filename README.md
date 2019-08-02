@@ -91,7 +91,7 @@ Like any other architectural style, REST also does have it’s own 6 guiding con
 
 - **Code on demand (optional)** – REST allows client functionality to be extended by downloading and executing code in the form of applets or scripts. This simplifies clients by reducing the number of features required to be pre-implemented.
 
-For your information that _REST API_ always contains these components and we will talk a little bit deeper about these : 
+For your information that _REST API_ always contains these informations and we will talk a little bit deeper about these : 
 - **_HTTP METHOD (GET/POST/PUT/DELETE)_**
 - **_Request Headers_**
 - **_Request Body_** (Optional)
