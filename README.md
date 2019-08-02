@@ -62,7 +62,7 @@ Think of an _API_ like a menu in a restaurant. The menu provides a list of dishe
 
 ![How API works](Assets/HowAPIWorks.png)
 
-The best way to show many similarities between a _REST API_ call and normal web page can be found with Reddit **_Public API (meaning one that does not require authentication/login)_**, lets take a look this **_https://www.reddit.com/r/all/ (REDDIT POSTS)_**, and we're all familiar with what Reddit Posts looks like. But now let's change it to **_https://www.reddit.com/r/all/.json (API REDDIT POSTS)_**, and what we get is a **response** to our _API request_. Basically we've made an _API request_ in our browser to **_Reddit's Public API_**. This is happen becuase _REST API_ explicitly takes advantage of HTTP method defined by the RFC 2616 protocol. They use **_GET_** to retrieve a data, _PUT_ to change the state or update _data_, which can be an _object_, file or _block_, **_POST_** to create that data, and **_DELETE_** to remove it. What we've done before is we send _GET Request_ to Reddit and get _Response_ back.
+The best way to show many similarities between a _REST API_ call and normal web page can be found with Reddit **_Public API (meaning one that does not require authentication/login)_**, lets take a look this **_https://www.reddit.com/r/all/ (REDDIT POSTS)_**, and we're all familiar with what Reddit Posts looks like. But now let's change it to **_https://www.reddit.com/r/all/.json (API REDDIT POSTS)_**, and what we get is a **response** to our _API request_. Basically we've made an _API request_ in our browser to **_Reddit's Public API_**. This is happen becuase _REST API_ explicitly takes advantage of HTTP method defined by the RFC 2616 protocol. They use **_GET_** to retrieve a data, **_PUT_** to change the state or update _data_, which can be an _object_, file or _block_, **_POST_** to create that data, and **_DELETE_** to remove it. What we've done before is we send _GET Request_ to Reddit and get _Response_ back.
 
 >**Note**: We'll talk about HTTP method later.
 
@@ -78,7 +78,7 @@ Now what we get might appear to be gibberish to the human eye but it's actually 
 >Green : Response from **_API_**
 
 ### Guiding Principles of REST
-Like any other architectural style, REST also does have it’s own 6 guiding constraints which must be satisfied if an interface needs to be referred as RESTful. These principles are listed below.
+Like any other architectural style, _REST_ also does have it’s own 6 guiding constraints which must be satisfied if an interface needs to be referred as RESTful. These principles are listed below.
 - **Client–server** – By separating the user interface concerns from the data storage concerns, we improve the portability of the user interface across multiple platforms and improve scalability by simplifying the server components.
 
 - **Stateless** – Each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is therefore kept entirely on the client.
@@ -139,16 +139,16 @@ Normal web browser doesn't allow you to put data in the body of a request, but y
 
 ### API - Request/Response Headers and Body
 #### **What is Request/Response Headers?**
-What is **Headers** in **_API_**? To say briefly headers are some kind of information about your **_Request_** and **_Response API_**. They define the operating parameters of an **_HTTP transaction_**. For security reasons, some **_Headers_** can only be controlled by the user agent **(We won't talk about this)**. 
+What is _Headers_ in _REST API_? To say briefly _headers_ are some kind of information about your _Request_ and _Response API_. They define the operating parameters of an _HTTP transaction_. For security reasons, some _Headers_ can only be controlled by the user agent **(We won't talk about this)**. 
 
-Headers in a Request API usually contains some kind of information to the format of the request and allowed format of the response **_(XML, JSON, etc)_**, or to give some kind of **_Authentication_**. A little bit different, **_Response Headers_** provide information about the status of the request and format of the response.
+Headers in a Request API usually contains some kind of information to the format of the request and allowed format of the response **_(XML, JSON, etc)_**, or to give some kind of **_Authentication_**. A little bit different, _Response Headers_ provide information about the status of the request and format of the response.
 >**Note**: We'll talk about **_Authentication_** later.
 
 Maybe it's a little bit confusing, what is it looks like? Lets open **Postman** [[Download]](https://www.getpostman.com/downloads/), and choose **Postman Console** on the bottom of the application **(Ctrl + Alt + C)**.
 ![Postman Console](Assets/PostmanConsole.PNG)
 After that, let's fill the input field with **https://www.reddit.com/r/all/.json** and then click **Send**. Wait for a couple seconds, and let's take a look on **Postman Console**. Some kind of information would appear in your **Postman Console**, just like image below.
 ![Postman Request](Assets/PostmanRequest.PNG)
-Let's take a look on **_Request Headers_**, as you can see there are some kind of information. These informations are **_Request Headers_**, **Headers** are transmitted after the request line (in case of a request HTTP message) or the response line (in case of a response HTTP message), which is the first line of a message.
+Let's take a look on _Request Headers_ and _Response Headers_, as you can see there are some kind of information. These informations are _Headers_, _Headers_ are transmitted after the request line (in case of a request HTTP message) or the response line (in case of a response HTTP message), which is the first line of a message.
 ```
 Request Headers:
 	User-Agent:"PostmanRuntime/7.15.2"
@@ -175,10 +175,10 @@ Response Headers:
 	x-xss-protection:"1; mode=block"
 	........
 ```
-There are so many informations, but take a look at **status: 200** in **_Response Headers_**, what is that mean? That is **Response Status Code**. **Status code** indicates whether the request was successful, and if not, the type of error that occurred.
+There are so many informations, but take a look at **status: 200** in _Response Headers_, what is that mean? That is **Response Status Code**. **Status code** indicates whether the request was successful, and if not, the type of error that occurred.
 ![Status Code](Assets/StatusCode.png)
 
-There are several **Status Code**, but these are list of Status Code that you really need to know
+There are several _Status Code_, but these are list of Status Code that you really need to know
 
 |Code            |Description                                                  |
 |----------------|-------------------------------------------------------------|
@@ -190,18 +190,21 @@ There are several **Status Code**, but these are list of Status Code that you re
 |500             |Internal Server Error: this status indicates that an error occurred on the server and it was unable to respond. |
 
 #### **What is Request/Response Body?**
-Before we try about how **Request/Response Body** works, lets talk about the concept of **_Authentication_**, obviously you need to give some kind of **_Authentication_**. In this case let's say if you're gonna post something on **Reddit**, and what they're using for **Authentication** is what's known as **_OAuth_** or **_OAuth2_**. Basically what you're doing is getting credentials (kind of like a username and passsword) although they called a **client ID** and **client Secret**, and then you're exchanging those for what's known as an **_access token_** and then pass that **_access token_** to Reddit, Reddit knows that the **request** to make the Post is coming from you, so it **creates** a new Post from your account.
+We already know about _Request/Response Headers_, now lets talk about _Request/Response Body_, before we try about how _Request/Response Body_ works, lets talk about the concept of **_Authentication & Authorization_**. In this case let's say if you're gonna post something on **Reddit**, and what they're using is what's known as **_OAuth_** or **_OAuth2_**. Basically what you're doing is getting credentials (kind of like a username and passsword) although they called a **_client ID_** and **_client Secret_**, and then you're exchanging those for what's known as an **_access token_** and then pass that _access token_ to Reddit, Reddit knows that the _request_ to make the Post is coming from you, so it creates a new Post from your account.
+
+>**TODO**: We'll talk about what is **_Authentication & Authorization later_**
 
 So here's what we gonna do in this section, we gonna try to create new Post from our account with API. Maybe in real project you can implement this on your App. The first step is we need to register our App on Reddit to get client ID and client Secret (Register here: https://www.reddit.com/prefs/apps). Click **"create another app..."**,  and then fill the forms, see image below for detail information:
 ![Reddit Create App](Assets/RedditCreateApp.PNG)
 
-After that click **"create app"**
->**TODO**: Explain about Request/Response Body
+After that click **"create app"**, and our app has been created. We have our _client ID_ and our _client Secret_, now we ready to go. But as we mentioned before, to send _Request API_ we need to get _access token_. In order to get _access token_ we have to send our _client ID_ and _client Secret_, to keep in mind that _access token_ is temporary, so if it's already expired you need to send _request_ again to refresh your _access token_.
+
+![Client ID & Client Secret](Assets/RedditClient.png)
 
 
 ## 3. Principles of Designing APIs
 Now let's understand the principles we should follow while designing the **_RESTful APIs_**.
-### **_Authorization_**
+### **_Authentication & Authorization_**
 This is most important, before users can make requests with your **_API_**, they’ll usually need to register for an **_API_** key or learn other ways to authenticate the requests. **_APIs_** vary in the way they authenticate users. Some APIs require you to include an API key in the request header, while other APIs require elaborate security due to the need to protect sensitive data, prove identity, and ensure the requests aren’t tampered with.
 - **Authentication:** Refers to proving correct identity
 - **Authorization:** Refers to allowing a certain action
