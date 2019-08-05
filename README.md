@@ -203,7 +203,7 @@ After that click **"create app"**, and our app has been created. We have our _cl
 
 For now, lets get our _access token_, for Reddit's API Documentation you can access it on https://www.reddit.com/dev/api/. Lets open your **Postman**, and set _HTTP Method_ to _POST_, fill the URL with https://www.reddit.com/api/v1/access_token, after that choose _authorization tab_ and
 
->**TODO**: Request/Response Body
+>**TODO**: Request/Response Body.
 
 
 ## 3. Principles of Designing APIs
