@@ -78,7 +78,7 @@ Now what we get might appear to be gibberish to the human eye but it's actually 
 
 >Green : Response from **_API_**
 
-### Guiding Principles of REST
+### c. Guiding Principles of REST
 Like any other architectural style, _REST_ also does have it’s own 6 guiding constraints which must be satisfied if an interface needs to be referred as RESTful. These principles are listed below.
 - **Client–server** – By separating the user interface concerns from the data storage concerns, we improve the portability of the user interface across multiple platforms and improve scalability by simplifying the server components.
 
@@ -101,7 +101,7 @@ For your information that _REST API_ always contains these informations and we w
 
 
 ## 2. A Deeper Dive into _REST API_
-### _REST API_ - What is JSON and why do we use it in _REST API_?
+### a. _REST API_ - What is JSON and why do we use it in _REST API_?
 >**Note**: **A Deeper Dive into _REST API_**, it's a little bit "Technical". But this is really ~~josss~~ good if you want to know what happen when we **Request to _REST API_** and get **Response back from _REST API_**.
 
 Let's talk about _JSON_, as we mentioned before **it's structured data organized according to key value pairs**, let's take a look at this simple _JSON_
@@ -130,7 +130,7 @@ For example you make an _API Request_ to get data from restaurant "Puri Purr", _
 As you can see the key stays the same for each restaurant, but the value would be different. Each _API_ must define its own format for the data that it serves, **developers** typically read documentation provided by the _API_ “maintainer” (Reddit in this case) in order to learn the data format and use it properly. The question is **_why JSON?_** because it’s readable, it’s lightweight, but the most important, **it's comparatively easy** to get applications written in **other programming languages** to read it and generate it as well. This means that an _API_ that returns _JSON_ can be accessed by an application written in programming languages _C#, Java, Ruby, Python_ and many more, this makes an _API_ scalable and platform independent. 
 
 
-### _REST API_ - _HTTP Method_
+### b. _REST API_ - _HTTP Method_
 Until now we've only been consuming data from _REST API_, but you can also write/send data to _REST API_, for example you can send customer information, file upload, etc, but before we go down that road we need to talk a little bit about the concept of **_HTTP request method_**. There are several _HTTP method_ but the big two that you really need to know are **_GET_** and **_POST_**. A _GET request_ is what you used to consumed data, that's what we've done so far by passing _URL_ in order to get data from the _API_. But a **_POST Request_** a little bit different, this method requests that a web server accepts the data enclosed in the body of the request message, most likely for storing it. It is usually used when you need to send file or data/information.
 >**Note**: We'll talk about **_body request_** later.
 
@@ -138,7 +138,7 @@ Normal web browser doesn't allow you to put data in the body of a request, but y
 >**Note**: We'll talk about **_request and response headers_** later.
 
 
-### _REST API_ - _Request/Response Headers and Body_
+### c. _REST API_ - _Request/Response Headers and Body_
 #### **What is Request/Response Headers?**
 What is _Headers_ in _REST API_? To say briefly _headers_ are some kind of information about your _Request_ and _Response API_. They define the operating parameters of an _HTTP transaction_. For security reasons, some _Headers_ can only be controlled by the user agent **(We won't talk about this)**. 
 
