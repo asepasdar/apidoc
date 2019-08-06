@@ -1,9 +1,9 @@
 # Introduction API (Application Programming Interface)
 ## Table of Content
 1. **What is API?**
-	- [General Overview](#general-overview)
-	- [What exactly is REST API?](#what-exactly-is-rest-api)
-	- [Guiding Principles of Rest](#guiding-principles-of-rest)
+	a. [General Overview](#general-overview)
+	b. [What exactly is REST API?](#what-exactly-is-rest-api)
+	c. [Guiding Principles of Rest](#guiding-principles-of-rest)
 2. **A Deeper Dive into REST API**
 	- [API - What is JSON and why do we use it in API?](#api-what-is-json-and-why-do-we-use-it-in-api)
 	- [API - HTTP Method](#api-http-method)
