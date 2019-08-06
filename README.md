@@ -3,6 +3,7 @@
 1. **What is API?**
 	- [General Overview](#general-overview)
 	- [What exactly is REST API?](#what-exactly-is-rest-api)
+	- [Guiding Principles of Rest](#guiding-principles-of-rest)
 2. **A Deeper Dive into REST API**
 	- [API - What is JSON and why do we use it in API?](#api-what-is-json-and-why-do-we-use-it-in-api)
 	- [API - HTTP Method](#api-http-method)
@@ -17,7 +18,7 @@
 	- [Supported formats](#supported-formats)
 
 ## 1. What is API?
-### General Overview
+### 1.1 General Overview
 **_API_** stands for **_application programming interface_**, which is a mechanism that allows the interaction between two applications using a set of rules. The interaction between applications refers to when one application wants to access data that another application holds or send the data to the said application. It can also be when one application is requesting services from another application. 
 
 Think of an _API_ like a menu in a restaurant. The menu provides a list of dishes you can order, along with a description of each dish. When you specify what menu items you want, the restaurant’s kitchen does the work and provides you with some finished dishes. You don’t know exactly how the kitchen prepares that food, and you don’t really need to. _But what's missing is the critical link to communicate your order to the kitchen and deliver your food back to your table,_ that's where the waiter or _API_ comes in. The waiter is the messenger that takes your order or (let's say this) _API Request_ to tells the kitchen what to do, and then delivers (let's say this) _API Response_ back to you, in this case **"food"**. There are several _API_, but there are 2 category that you need to know : 
@@ -129,7 +130,7 @@ For example you make an _API Request_ to get data from restaurant "Puri Purr", _
 As you can see the key stays the same for each restaurant, but the value would be different. Each _API_ must define its own format for the data that it serves, **developers** typically read documentation provided by the _API_ “maintainer” (Reddit in this case) in order to learn the data format and use it properly. The question is **_why JSON?_** because it’s readable, it’s lightweight, but the most important, **it's comparatively easy** to get applications written in **other programming languages** to read it and generate it as well. This means that an _API_ that returns _JSON_ can be accessed by an application written in programming languages _C#, Java, Ruby, Python_ and many more, this makes an _API_ scalable and platform independent. 
 
 
-### REST API - HTTP Method
+### _REST API_ - _HTTP Method_
 Until now we've only been consuming data from _REST API_, but you can also write/send data to _REST API_, for example you can send customer information, file upload, etc, but before we go down that road we need to talk a little bit about the concept of **_HTTP request method_**. There are several _HTTP method_ but the big two that you really need to know are **_GET_** and **_POST_**. A _GET request_ is what you used to consumed data, that's what we've done so far by passing _URL_ in order to get data from the _API_. But a **_POST Request_** a little bit different, this method requests that a web server accepts the data enclosed in the body of the request message, most likely for storing it. It is usually used when you need to send file or data/information.
 >**Note**: We'll talk about **_body request_** later.
 
@@ -137,7 +138,7 @@ Normal web browser doesn't allow you to put data in the body of a request, but y
 >**Note**: We'll talk about **_request and response headers_** later.
 
 
-### API - Request/Response Headers and Body
+### _REST API_ - _Request/Response Headers and Body_
 #### **What is Request/Response Headers?**
 What is _Headers_ in _REST API_? To say briefly _headers_ are some kind of information about your _Request_ and _Response API_. They define the operating parameters of an _HTTP transaction_. For security reasons, some _Headers_ can only be controlled by the user agent **(We won't talk about this)**. 
 
