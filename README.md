@@ -53,7 +53,7 @@ Think of an _API_ like a menu in a restaurant. The menu provides a list of dishe
  	}
 	```
 
-	- **REST**, when you hear people talk about _Twitter's API_ or _Google's API_, what they're talking about is a **_REST API_**, and _REST API_ stands for **_REpresentational State Transfer_**. REST is not a protocol like the other web services, instead, it is a set of architectural principles. The REST service needs to have certain characteristics, including simple interfaces, which are resources identified easily within the request and manipulation of resources using the interface. It can transfer data with JSON format or XML Format.
+	- **REST**, when you hear people talk about _Twitter's API_ or _Google's API_, what they're talking about is a **_REST API_**, and _REST API_ stands for **_REpresentational State Transfer_**. _REST_ is not a protocol like the other web services, instead, it is a set of architectural principles. The REST service needs to have certain characteristics, including simple interfaces, which are resources identified easily within the request and manipulation of resources using the interface. It can transfer data with JSON format or XML Format.
 
 	>**Note**: We will talk about **REST API** a little bit deeper.
 
@@ -63,9 +63,9 @@ Think of an _API_ like a menu in a restaurant. The menu provides a list of dishe
 
 ![How API works](Assets/HowAPIWorks.png)
 
-The best way to show many similarities between a _REST API_ call and normal web page can be found with Reddit **_Public API (meaning one that does not require authentication/login)_**, lets take a look this **_https://www.reddit.com/r/all/ (REDDIT POSTS)_**, and we're all familiar with what Reddit Posts looks like. But now let's change it to **_https://www.reddit.com/r/all/.json (API REDDIT POSTS)_**, and what we get is a **response** to our _API request_. Basically we've made an _API request_ in our browser to **_Reddit's Public API_**. This is happen becuase _REST API_ explicitly takes advantage of HTTP method defined by the RFC 2616 protocol. They use **_GET_** to retrieve a data, **_PUT_** to change the state or update _data_, which can be an _object_, file or _block_, **_POST_** to create that data, and **_DELETE_** to remove it. What we've done before is we send _GET Request_ to Reddit and get _Response_ back.
+The best way to show many similarities between a _REST API_ call and normal web page can be found with Reddit **_Public API (meaning one that does not require authentication/login)_**, lets take a look this **_https://www.reddit.com/r/all/ (REDDIT POSTS)_**, and we're all familiar with what Reddit Posts looks like. But now let's change it to **_https://www.reddit.com/r/all/.json (API REDDIT POSTS)_**, and what we get is a **response** to our _API request_. Basically we've made an _API request_ in our browser to **_Reddit's Public API_**. This is happen becuase _REST API_ explicitly takes advantage of _HTTP method_ defined by the RFC 2616 protocol. They use **_GET_** to retrieve a data, **_PUT_** to change the state or update _data_, which can be an _object_, file or _block_, **_POST_** to create that data, and **_DELETE_** to remove it. What we've done before is we send _GET Request_ to Reddit and get _Response_ back.
 
->**Note**: We'll talk about HTTP method later.
+>**Note**: We'll talk about _HTTP method_ later.
 
 >**Note**: _API Response_ might be not the same with image below
 
@@ -190,8 +190,8 @@ There are several _Status Code_, but these are list of Status Code that you real
 |406             |Not Acceptable: the Accept header response type is not supported. |
 |500             |Internal Server Error: this status indicates that an error occurred on the server and it was unable to respond. |
 
-#### **What is Request/Response Body?**
-We already know about _Request/Response Headers_, now lets talk about _Request/Response Body_, before we try about how _Request/Response Body_ works, lets talk about the concept of **_Authentication & Authorization_**. In this case let's say if you're gonna post something on **Reddit**, and what they're using is what's known as **_OAuth_** or **_OAuth2_**. Basically what you're doing is getting credentials (kind of like a username and passsword) although they called a **_client ID_** and **_client Secret_**, and then you're exchanging those for what's known as an **_access token_** and then pass that _access token_ to Reddit, Reddit knows that the _request_ to make the Post is coming from you, so it creates a new Post from your account.
+#### **What is _Request/Response Body_?**
+Now lets talk about _Request/Response Body_, we already know that _headers_ are informations that define the operating parameters of an _HTTP transaction_, so what is _request/response body_? _request/response body_ is information that carried by this operation itself. Before we try about how _Request/Response Body_ works, lets talk about the concept of **_Authentication & Authorization_**. In this case let's say if you're gonna post something on **Reddit**, and what they're using is what's known as **_OAuth_** or **_OAuth2_**. Basically what you're doing is getting credentials (kind of like a username and passsword) although they called a **_client ID_** and **_client Secret_**, and then you're exchanging those for what's known as an **_access token_** and then pass that _access token_ to Reddit, Reddit knows that the _request_ to make the Post is coming from you, so it creates a new Post from your account.
 
 >**TODO**: We'll talk about what is **_Authentication & Authorization later_**
 
@@ -202,7 +202,7 @@ After that click **"create app"**, and our app has been created. We have our _cl
 
 ![Client ID & Client Secret](Assets/RedditClient.png)
 
-For now, lets get our _access token_, for Reddit's API Documentation you can access it on https://www.reddit.com/dev/api/. Lets open your **Postman**, and set _HTTP Method_ to _POST_, fill the URL with https://www.reddit.com/api/v1/access_token, after that choose _authorization tab_ and
+For now, lets get our _access token_, for Reddit's API Documentation you can access it on https://www.reddit.com/dev/api/. Lets open your **Postman**, and set _HTTP Method_ to _POST_, fill the URL with https://www.reddit.com/api/v1/access_token, after that choose **_authorization_** tab and then set type to _OAuth 2.0_, just like image below:
 
 >**TODO**: Request/Response Body.
 
